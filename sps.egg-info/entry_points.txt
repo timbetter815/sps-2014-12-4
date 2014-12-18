@@ -1,0 +1,8 @@
+[console_scripts]
+sps-api = sps.cmd.api:main
+sps-manage = sps.cmd.manage:main
+
+[sps.common.image_location_strategy.modules]
+location_order_strategy = sps.common.location_strategy.location_order
+store_type_strategy = sps.common.location_strategy.store_type
+

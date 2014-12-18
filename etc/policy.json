@@ -1,0 +1,10 @@
+{
+    "context_is_admin":  "",
+    "default": "",
+
+    "add_demo": "",
+    "delete_demo": "",
+    "get_demo": "",
+    "get_demo_list": "",
+    "update_demo": ""
+}

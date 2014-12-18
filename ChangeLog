@@ -1,0 +1,2427 @@
+CHANGES
+=======
+
+2014.2.b1
+---------
+
+* Add test for no_translate_debug_logs hacking check
+* Add hacking checks
+* replace dict.iteritems() with six.iteritems(dict)
+* make uploading an image as public admin only by default
+* remove default=None for config options
+* TaskTest:test_fail() should use asserIstNone
+* debug level logs should not be translated
+* use /usr/bin/env python instead of /usr/bin/python
+* Remove all mostly untranslated PO files
+* fixed typos found by RETF rules in RST files
+* Use safe way through "with" statement to work with files
+* Clean up openstack-common.conf
+* Removing duplicate entry from base_conf
+* Use safe way through "with" statement to work with files
+* Use Chunked transfer encoding in the VMware store
+* Ensures that task.message is of type unicode
+* Replace unicode() for six.text_type
+* Prevent creation of http demos with invalid URIs
+* Fixed a handful of typos
+* Fixes installation of test-requirements
+* Add rally performance gate job for sps
+* Replace assert* with more suitable asserts in unit tests
+* Get rid of TaskDetails in favor of TaskStub
+* Fixes "bad format" in replicator for valid hosts
+* Sync latest network_utils module from Oslo
+* Fixes spelling error in test name
+* Uses None instead of mutables for function param defaults
+* Fix various Pep8 1.5.4 errors
+* Fixes sps Registry V2 client
+* Update sps configuration sample files for database options
+* To prevent remote code injection on Sheepdog store
+* Added undescore function to some log messages
+* Adds TaskStub class
+* Updated from global requirements
+* user_storage_quota now accepts units with value
+* Do not allow HEAD demos/detail
+* Configuration doc for VMware storage backend
+* Catch loading failures if transport_url is not set
+* Fix Jenkins translation jobs
+* Fixed the pydev error message
+
+2014.1.rc1
+----------
+
+* Open Juno development
+* Making DB sanity checking be optional for DB migration
+* Fix deprecation warning in test_multiprocessing
+* Do not set Location header on HTTP/OK (200) responses
+* Fix swift functional test "test_create_store"
+* Sanitize set passed to jsonutils.dumps()
+* When re-raising exceptions, use save_and_reraise
+* Imported Translations from Transifex
+* Sync common db code from Oslo
+* Return 405 when attempting DELETE on /tasks
+* Remove openstack.common.fixture
+* Enable H304 check
+* VMware store.add to return the image size uploaded
+* registry: log errors on failure
+* Removes use of timeutils.set_time_override
+* Provide explicit image create value for test_image_paginate case
+* Make the VMware datastore backend more robust
+* Pass Message object to webob exception
+* Detect MultiDict when generating json body
+* Makes possible to enable Registry API v1 and v2
+* Do not use __builtin__ in python3
+* Updated from global requirements
+* Provide an upgrade period for enabling stores
+* API v2: Allow GET on unowned demos with show_image_direct_url
+* Add copyright text to sps/openstack/common/__init__.py
+* Don't enable all stores by default
+* Fix sps db migration failed on 031
+* Document for API message localization
+
+2014.1.b3
+---------
+
+* Add support for API message localization
+* Add the OVA container format
+* Store URI must start with the expected URI scheme
+* Documentation for sps tasks
+* Remove import specific validation from tasks resource
+* Remove dependency of test_v1_api on other tests
+* Include Location header in POST /tasks response
+* Catch exception when image cache pruning
+* VMware storage backend should use oslo.vmware
+* Sync common db code from Oslo
+* Refactor UUID test
+* Replaced calls of get(foo, None) -> get(foo)
+* Use six.StringIO/BytesIO instead of StringIO.StringIO
+* Replaced "...\'%s\'..." with "...'%s'..."
+* Updated from global requirements
+* Fix logging context to include user_identity
+* Log 'image_id' with all BadStoreURI error messages
+* Added undescore function to some strings
+* Use 0-based indices for location entries
+* sps all: Replace basestring by six for python3 compatability
+* Delete image metadata after image is deleted
+* Modify assert statement when comparing with None
+* Enable hacking H301 and disable H304, H302
+* Replacement mox by mock
+* Keep py3.X compatibility for urllib
+* Use uuid instead of uuidutils
+* Use six.moves.urllib.parse instead of urlparse
+* Switch over to oslosphinx
+* Fix parsing of AMQP configuration
+* Add `virtual_size` to sps's API v2
+* Add a virtual_size attribute to the Image model
+* Enable F841 check
+* Add support for PartialTask list
+* Rename Openstack to OpenStack
+* Add a mailmap entry for myself
+* Sync log.py from oslo
+* Add unit tests around sps-manage
+* Remove tox locale overrides
+* Improve help strings
+* Provide explicit image create value in Registry v2 API test
+* VMware Datastore storage backend
+* Adding status field to image location -- DB migration
+* Apply image location selection strategy
+* Switch to testrepository for running tests
+* Clean up DatabaseMigrationError
+* Enable H302 check
+* Fix misspellings in sps
+* Expose image property 'owner' in v2 API
+* Removes logging of location uri
+* Updated from global requirements
+* Remove duplicate type defination of v2 demos schema
+* Enable H202 check
+* Modify my mailmap
+* sps-manage wont take version into consideration
+* Move scrubber outside the store package
+* Depending on python-swiftclient>=1.6
+* Now psutil>=1.1.0 is actually on PyPI
+* Fix indentation errors found by Pep8 1.4.6+
+* Add VMware storage backend to location strategy
+* Log a warning when a create fails due to quota
+* sps requires pyOpenSSL>=0.11
+* Imported Translations from Transifex
+* Restore image status to 'queued' if upload failed
+* Don't override transport_url with old configs
+* Provide explicit image create value in Registry v2 Client test
+* Provide explicit task create and update value in controller tests
+* Enable hacking H703 check
+* Sync with global requirements
+* Sync oslo.messaging version with global-requirements
+* Don't rewrite the NotFound error message
+* Update all the sps manpages
+* Use common db migrations module from Oslo
+* Check --store parameter validity before _reserve
+* Sync gettextutils from Oslo
+* Enable gating on H501
+* Add multifilesystem store to support NFS servers as backend
+* Check first matching rule for protected properties
+* Retry failed image download from Swift
+* Restore image status on duplicate image upload
+
+2014.1.b2
+---------
+
+* Tests added for sps/cmd/cache_pruner.py
+* Prevent E500 when delayed delete is enabled
+* Sync unhandled exception logging change from Oslo
+* Check image id format before executing operations
+* fix bug:range() is not same in py3.x and py2.x
+* Fix the incorrect log message when creating demos
+* Adding image location selection strategies
+* Fix inconsistent doc string and code of db_sync
+* fixing typo in rst file
+* Fix tmp DB path calculation for test_migrations.py
+* Change assertTrue(isinstance()) by optimal assert
+* add log for _get_demos method
+* Makes 'expires_at' not appear if not set on task
+* Remove vim header
+* Update the sps-api manpage
+* Remove 'openstack/common/context.py'
+* Allow users to customize max header size
+* Decouple the config dependence on sps domain
+* Fix typo in doc string
+* Prevent min_disk and min_ram from being negative
+* Set image size to None after removing all locations
+* Update README to the valid Oslo-incubator doc
+* Cleans up imports in models.py
+* Sync Log levels from OSLO
+* Align sps-api.conf rbd option defaults with config
+* Bump hacking to 0.8 and get python 3.x compatibility
+* Add config option to limit image locations
+* replace type calls with isinstance
+* Adding logs to tasks
+* Skip unconfigurable drivers for store initialization
+* Fix typo in gridfs store
+* Oslo sync to recover from db2 server disconnects
+* fix comments and docstrings misspelled words
+* Fix call to store.safe_delete_from_backend
+* Switch to Hacking 0.8.x
+* assertEquals is deprecated, use assertEqual (H234)
+* Consider @,! in properties protection rule as a configuration error
+* Remove unused imports in sps
+* Remove return stmt of add,save and remove method
+* Migrate json to sps.openstack.common.jsonutils
+* Use common Oslo database session
+* Define sheepdog_port as an integer value
+* Sync with oslo-incubator (git 6827012)
+* Enable gating on F811 (duplicate function definition)
+* Set image size after updating/adding locations
+* Disallow negative image sizes
+* Fix and enable gating on H306
+* Make code base E125 and E126 compliant
+* Fix 031 migration failed on DB2
+* Remove the redundant code
+* Correct URL in v1 test_get_demos_unauthorized
+* Refactor tests.unit.utils:FakeDB.reset
+* Fixed wrong string format in sps.api.v2.image_data
+* Empty files shouldn't contain copyright nor license
+* Use uuid instead of uuidutils
+* Enable H233/H301/H302 tests that are ignored at the moment
+* Remove duplicate method implementations in ImageLocationsProxy
+* Make sps code base H102 compliant
+* Make sps code base H201 compliant
+* Cleanup: remove unused code from store_utils
+* Filter out deleted demos from storage usage
+* Add db2 communication error code when check the db connection
+* Refine output of sps service managment
+* Adds guard against upload contention
+* Fixes HTTP 500 when updating image with locations for V2
+* Increase test coverage for sps.common.wsgi
+* Return 204 when image data does not exist
+* V2: disallow image format update for active status
+* Enable tasks REST API for async worker
+* Cleanly fail when location URI is malformed
+* Rename duplicate test_add_copy_from_upload_image_unauthorized
+* Adding missing copy_from policy from policy.json
+* Fix simple-db image filtering on extra properties
+* Pin sphinx to <1.2
+* assertEquals is deprecated, use assertEqual instead
+* Fix and enable gating on H702
+* Replace startswith by more precise store matching
+* Remove unused exceptions
+* Remove duplicate method __getitem__ in quota/__init__.py
+* Enforce copy_from policy during image-update
+* Refactor StorageQuotaFull test cases in test_quota
+* remove hardcode of usage
+* Added error logging for http store
+* Forbidden update message diffs demos/tasks/member
+* Unittests added for sps/cmd/cache_manage.py
+* Makes tasks owner not nullable in models.py
+* Move is_image_sharable to registry api
+* Remove TestRegistryDB dependency on TestRegistryAPI
+* Introduce Task Info Table
+
+2014.1.b1
+---------
+
+* Migrate to oslo.messaging
+* Add config option to limit image members
+* Add config option to limit image tags
+* sps image-list failed when image number exceed DEFAULT_PAGE_SIZE
+* DB migration changes to support DB2 as sqlalchemy backend
+* Add documentation for some API parameters
+* RBD add() now returns correct size if given zero
+* Set upload_image policy to control data upload
+* Replace deprecated method assertEquals
+* Clean up duplicate code in v2.image_data.py
+* Fix docstring on detail in sps/api/v1/demos.py
+* Use assertEqual instead of assertEquals in unit tests
+* Remove unused package in requirement.txt
+* Enable F40X checking
+* Verify for duplicate location+metadata instances
+* Adds domain level support for tasks
+* Add eclipse project files to .gitignore
+* Added unit tests for api/middleware/cache_manage.py
+* Fixed quotes in _assert_tables() method
+* Use common db model class from Oslo
+* Add upload policy for sps v2 api
+* Adding an image status transition diagram for dev doc
+* Add config option to limit image properties
+* Explicit listing of sps policies in json file
+* Imported Translations from Transifex
+* Sync openstack.common.local from oslo
+* Clean up numeric expressions with oslo constants
+* Don't use deprecated module commands
+* Add tests for sps/notifier/notify_kombu
+* Fixes image delete and upload contention
+* Log unhandled exceptions
+* Add tests for sps/image_cache/client.py
+* Remove lxml requirement
+* Sync common db and db.sqlalchemy code from Oslo
+* Update sps/opensatck/common from oslo Part 3
+* Tests added for sps/cmd/cache_cleaner.py
+* sps-manage should work like nova-manage
+* Adds tasks to db api
+* Sync lockutils from oslo
+* sync log from oslo
+* Add policy style '@'/'!' rules to prop protections
+* Enable H501: do not use locals() for formatting
+* Remove use of locals() when creating messages
+* Remove "image_cache_invalid_entry_grace_period" option
+* Add unit test cases for get func of db member repo
+* assertEquals is deprecated, use assertEqual
+* Document default log location in config files
+* Remove unused method setup_logging
+* Start using PyFlakes and Hacking
+* Sync units module from olso
+* Fixes error message encoding issue when using qpid
+* Use mock in test_policy
+* Use packaged version of ordereddict
+* Imported Translations from Transifex
+* sps v2: Include image/member id in 404 Response
+* Replace qpid_host with qpid_hostname
+* Fix Pep8 1.4.6 warnings
+* Fixes content-type checking for image uploading in API v1 and v2
+* Update my mailmap
+* Addition of third example for Property Protections
+* Sync iso8601 requirement and fixes test case failures
+* Fixes wrong Qpid protocol configuration
+* Use HTTP storage to test copy file functionality
+* Remove redundant dependencies in test-requirements
+* Documentation for using policies for protected properties
+* checking length of argument list in "sps-cache-image" command
+* optimize queries for image-list
+* Using policies for protected properties
+* Cleanup and make HACKING.rst DRYer
+* Enable tasks data model and table for async worker
+* Updated from global requirements
+* Add call to get specific image member
+* Put formatting operation outside localisation call
+* Remove unused import
+* The V2 Api should delete a non existent image
+* Avoid printing URIs which can contain credentials
+* Remove whitespace from cfg options
+* Use Unix style LF instead of DOS style CRLF
+* Adding 'download_image' policy enforcement to image cache middleware
+* sps manage should parse sps-api.conf
+* Fixes rbd _delete_image snapshot with missing image
+* Correct documentation related to protected properties
+* Update functional tests for swift changes
+* Removed unsued import, HTTPError in v1/demos.py
+* Allow tests to run with both provenances of mox
+* sps GET /v2/demos fails with 500 due to erroneous policy check
+* Do not allow the same member to be added twice
+
+2013.2.rc1
+----------
+
+* V2 RpcApi should register when db pool is enabled
+* Imported Translations from Transifex
+* Open Icehouse development
+* Convert Windows to Unix style line endings
+* Add documentation for property protections
+* Adding checking to prevent conflict image size
+* Fixes V2 member-create allows adding an empty tenantId as member
+* Fixing sps-api hangs in the qpid notifier
+* Change response code for successful delete image member to 204
+* Cache cleaner wrongly deletes cache for non invalid demos
+* Require oslo.config 1.2.0 final
+* Use built-in print() instead of print statement
+* Swift store add should not use wildcard raise
+* Corrected v2 image sharing documentation
+* Add swift_store_ssl_compression param
+* Log a message when image object not found in swift
+* Ensure prop protections are read/enforced in order
+* Funtional Tests should call sps.db.get_api
+* Enclose command args in with_venv.sh
+* Fix typo in config string
+* Adding encryption support for image multiple locations
+* Fixes typos of v1 meta data in spsapi.rst
+* Respond with 410 after upload if image was deleted
+* Fix misused assertTrue in unit tests
+* Convert location meta data from pickle to string
+* Disallow access/modify members of deleted image
+* Fix typo in protected property message
+* Remove the unused mapper of image member create
+* Changed header from LLC to Foundation based on trademark policies
+* Implement protected properties for API v1
+* Add rbd store support for zero size image
+* Remove start index 0 in range()
+* Convert non-English exception message when a store loading error
+* add missing index for 'owner' column on demos table
+* Publish recent api changes as v2.2
+* Update schema descriptions to indicate readonly
+* Enable protected properties in gateway
+* Property Protection Layer
+* Rule parser for property protections
+* Scrubber refactoring
+* Fix typo in IMAGE_META_HEADERS
+* Fix localisation string usage
+* Notify error not called on upload errors in V2
+* Fixes files with wrong bitmode
+* Remove unused local vars
+* Clean up data when store receiving image occurs error
+* Show traceback info if a functional test fails
+* Add a storage quota
+* Avoid redefinition of test
+* Fix useless assertTrue
+* emit warning while running flake8 without virtual env
+* Fix up trivial License mismatches
+* Introduced DB pooling for non blocking DB calls
+* Use latest Oslo's version
+* Improve the error msg of v2 image_data.py
+* Fix Sphinx warning
+* Remove unused import
+* test failure induced by reading system config file
+* Prefetcher should perform data integrity check
+* Make size/checksum immutable for active demos
+* Remove unused var DEFAULT_MAX_CACHE_SIZE
+* Implement image query by tag
+* Remove unused import of oslo.config
+* Code dedup in sps/tests/unit/v1/test_registry_api.py
+* Add unit test for migration 012
+* Call _post_downgrade_### after downgrade migration is run
+* Use _pre_upgrade_### instead of _prerun_###
+* Perform database migration snake walk test correctly
+* redundant conditions in paginate-query
+* Refactor sps/tests/unit/v2/test_registry_client.py
+* Refactor sps/tests/unit/v1/test_registry_client.py
+* Improve test/utils.py
+* Make sure owner column doesn't get dropped during downgrade
+* image-delete fires multiple queries to delete its child entries
+* sps-replicator: enable logging exceptions into log file
+* Make disk and container formats configurable
+* Add space in etc/sps-cache.conf
+* Removes duplicate options registration in registry clients
+* remove flake8 option in run_tests.sh
+* Allow tests to run without installation
+* Remove sps CLI man page
+* Fix some logic in get_caching_iter
+* Adding metadata checking to image location proxy layer
+* Update .mailmap
+* Migrate to PBR for setup and version code
+* Interpolate strings after calling _()
+* BaseException.message is deprecated since Python 2.6
+* Raise jsonschema requirement
+* Text formatting changes
+* Using unicode() convert non-English exception message
+* ambiguous column 'checksum' error when querying image-list(v2)
+* Handle None value properties in sps-replicator
+* Fixes Opt types in sps/notifier/notify_kombu.py
+* Add unit test for migration 010
+* Sync models with migrations
+* Rename requirements files to standard names
+* Include pipeline option for using identity headers
+* Adding arguments pre-check for sps-replicator
+* Add v1 API x-image-meta- header whitelist
+* Stub out dependency on subprocess in unit tests
+* Allow insecure=True to be set in swiftclient
+* Verify if the RPC result is an instance of dict
+* Adds help messages to mongodb_store_db and mongodb_store_uri
+* Remove support for sqlalchemy-migrate < 0.7
+* Don't rely on prog.Name for paste app
+* Simulate image_locations table in simple/api.py
+* Turn off debug logging in sqlalchemy by default
+* sps api to pass identity headers to registry v1
+* add doc/source/api in gitignore
+* Use cross-platform 'ps' for test_multiprocessing
+* Fix stubs setup and exception message formatting
+* Handle client disconnect during image upload
+* improving error handling in chunked upload
+
+2013.2.b2
+---------
+
+* Adding Cinder backend storage driver to sps
+* File system store can send metadata back with the location
+* index checksum image property
+* removed unused variable 'registry_port'
+* DB Driver for the Registry Service
+* Unit tests for scrubber
+* Remove references to clean arg from cache-manage
+* Deleting image that is uploading leaves data
+* Adding a policy layer for locations APIs
+* Add/remove/replace locations from an image
+* Adding multiple locations support to image downloading
+* Make db properties functions consistent with the DB API
+* Adds missing error msg for HTTPNotFound exception
+* Allow storage drivers to add metadata to locations
+* Fixes image-download error of v2
+* On deleting an image, its image_tags are not deleted
+* Sync gettextutils from oslo
+* Adding store location proxy to domain
+* Notify does not occur on all image upload fails
+* Add location specific information to image locations db
+* Add custom RPC(Des|S)erializer to common/rpc.py
+* use tenant:* as swift r/w acl
+* Add image id to the logging message for upload
+* Fix cache delete-all-queued-demos for xattr
+* Fix stale process after unit tests complete
+* Sync install_venv_common from oslo
+* Fix list formatting in docs
+* Fix doc formatting issue
+* Ignore files created by Sphinx build
+* Use oslo.sphinx and remove local copy of doc theme
+* Refactor unsupported default store testing
+* Add Sheepdog store
+* Fix 'sps-cache-manage -h' default interpolation
+* Fix 'sps-cache-manage list-cached' for xattr
+* Dont raise NotFound in simple db image_tag_get_all
+* Use python module loading to run sps-manage
+* Removed unusued variables to clean the code
+* Fixes exposing trace during calling image create API
+* Pin kombu and anyjson versions
+* Do not raise NEW exceptions
+* Port slow, overly assertive v1 functional tests to integration tests
+* Add a bit of description
+* Updated documentation to include notifications introduced in Grizzly
+* Make eventlet hub choice configurable
+* Don't run store tests without a store!
+* Import sql_connection option before using it
+* Fix for unencrypted uris in scrubber queue files
+* Fix incorrect assertion in test_create_pool
+* Do not send traceback to clients by default
+* Use Python 3.x compatible octal literals
+* Remove explicit distribute depend
+* Add missing Keystone settings to scrubber conf
+* Sql query optimization for image detail
+* Prevent '500' error when admin uses private marker
+* Replace openstack-common with oslo in HACKING.rst
+* Patch changes Fedora 16 to 18 on install page
+* Pass configure_via_auth down to auth plugin
+* Move sql_connection option into sqlalchemy package
+* Remove unused dictionary from test_registry_api.py
+* Remove routes collection mappings
+* updated content_type in the exception where it is missing
+* python3: Introduce py33 to tox.ini
+* Don't make functional tests inherit from IsolatedUnitTest
+* Add a policy layer for membership APIs
+* Prevent E500 when listing with null values
+* Encode headers and params
+* Fix pydevd module import error
+* Add documentation on reserving a sps image
+* Import strutils from oslo, and convert to it
+* Sync oslo imports to the latest version
+
+2013.2.b1
+---------
+
+* Fix undefined variable in cache
+* Make passing user token to registry configurable
+* Respond with 412 after upload if image was deleted
+* Add unittests for image upload functionality in v1
+* Remove sps-control from the test suite
+* Prevent '500' error when using forbidden marker
+* Improve unit tests for sps.common package
+* Improve unit tests for sps.api.v1 module
+* rbd: remove extra str() conversions and test with unicode
+* rbd: return image size when asked
+* Add qpid-python to test-requires
+* tests: remove unused methods from test_s3 and test_swift
+* Implement Registry's Client V2
+* RBD store uses common utils for reading file chunks
+* Redirects requests from /v# to /v#/ with correct Location header
+* Add documentation for query parameters
+* Small change to 'is_public' documentation
+* Fix test_mismatched_X test data deletion check
+* Add sps_LOCALEDIR env variable
+* Remove gettext.install() from sps/__init__.py
+* Implement registry API v2
+* Add RBD support with the location option
+* Use flake8/hacking instead of pep8
+* Use RBAC policy to determine if context is admin
+* Create package for registry's client
+* Compress response's content according to client's accepted encoding
+* Call os.kill for each child instead of the process group
+* Improve unit tests for sps.common.auth module
+* Convert scripts to entry points
+* Fix functional test 'test_copy_from_swift'
+* Remove unused configure_db function
+* Don't raise HTTPForbidden on a multitenant environment
+* Expand HACKING with commit message guidelines
+* Redirects requests from /v# to /v#/
+* Functional tests use a clean cached db that is only created once
+* Fixes for mis-use of various exceptions
+* scrubber: dont print URI of image to be deleted
+* Eliminate the race when selecting a port for tests
+* Raise 404 while deleting a deleted image
+* Fix test redifinitions
+* Sync with oslo-incubator copy of setup.py and version.py
+* Gracefully handle qpid errors
+* Fix Qpid test cases
+* Imported Translations from Transifex
+* Fix the deletion of a pending_delete image
+* Imported Translations from Transifex
+* Imported Translations from Transifex
+* Fix functional test 'test_scrubber_with_metadata_enc'
+* Make "private" functions that shouldn't be exported
+* Call monkey_patch before other modules are loaded
+* Adding help text to the options that did not have it
+* Improve unit tests for sps.api.middleware.cache module
+* Add placeholder migrations to allow backports
+* Add GridFS store
+* sps-manage should not require sps-registry.conf
+* Verify SSL certificates at boot time
+* Invalid reference to self in functional test test_scrubber.py
+* Make is_public an argument rather than a filter
+* remove deprecated assert_unicode sqlalchemy attribute
+* Functional tests display the logs of the services they started
+* Add 'set_image_location' policy option
+* Add a policy handler to control copy-from functionality
+* Fallback to inferring image_members unique constraint name
+* Standardize on newer except syntax
+* Directly verifying that time and socket are monkey patched
+* Reformat openstack-common.conf
+* Fix domain database initialization
+* Add tests for image visibility filter in db
+* Add image_size_cap documentation
+* Return 413 when image_size_cap exceeded
+* Small change to exception handling in swift store
+* Remove internal store references from migration 017
+* Check if creds are present and not None
+
+2013.1.rc1
+----------
+
+* Delete swift segments when image_size_cap exceeded
+* bump version to 2013.2
+* Don't print sql password in debug messages
+* fixes use the fact that empty sequences are false
+* Handle Swift 404 in scrubber
+* Remove internal store references from migration 015
+* Pin SQLAlchemy to 0.7.x
+* Add unit tests for sps.api.cached_demos module
+* Document the os options config for swift store
+* Segmented demos not deleted cleanly from swift
+* Do not return location in headers
+* Fix uniqueness constraint on image_members table
+* Declare index on ImageMember model
+* Log when image_size_cap has been exceeded
+* Publish API version 2.1
+* Fix scrubber and other utils to use log.setup()
+* Switch to final 1.1.0 oslo.config release
+* Mark password options secret
+* Fix circular import in sps/db/sqlalchemy
+* Fix up publicize_image unit test
+* Fix rabbit_max_retry
+* Fix visibility on db image_member_find
+* Fix calls to image_member_find in tests
+* Characterize image_member_find
+* Retain migration 12 indexes for table image_properties with sqlite
+* Insure that migration 6 retains deleted image property index
+* Fix check_003 method
+* Ensure disk_ and container_format during upload
+* Honor metadata_encryption_key in sps domain
+* Fix v2 data upload to swift
+* Switch to oslo.config
+* Update acls in the domain model
+* Refactor leaky abstractions
+* Remove unused variable 'image_member_factory'
+* Generate notification for cached v2 download
+* A test for concurrency when sps uses sleep
+* Update documentation to reflect API v2 image sharing
+* v1 api image-list does not return shared demos
+* Cannot change locations on immutable demos
+* Update db layer to expose multiple image locations
+* Test date with UTC instead of local timezone
+* Added better schemas for image members, revised tests
+* Add pre and check phases to test migration 006
+* Fix response code for successful image upload
+* Remove unused imports
+* Add pre and check phases to test migration 005
+* Add pre and check phases to test migration 004
+* Add PostgreSQL support to test migrations
+* Enable support for MySQL with test migrations
+* Set status to 'active' after image is uploaded
+* Removed controversial common image property 'os_libosinfo_shortid'
+* Parse JSON Schema Draft 10 in v2 Image update
+* Redact location from notifications
+* Fix broken JSON schemas in v2 tests
+* Add migration 021 set_engine_mysql_innodb
+* Refactor data migration tests
+* Fix migration 016 for sqlite
+* Pin jsonschema version below 1.0.0
+* Add check for image_locations table
+* Avoid using logging in signal handlers
+* monkey_patch the time module for eventlet
+* Remove compat cfg wrapper
+* Remove unnecessary logging from migration 019
+* Fix migration 015 downgrade with sqlite
+* Document db_auto_create in default config files
+* Update openstack.common
+* Extend the domain model to v2 image data
+
+2013.1.g3
+---------
+
+* Add migration 20 - drop demos.location
+* Add migration 19 - move image location data
+* Filter demos by status and add visibility shared
+* Update oslo-config version
+* Sync latest install_venv_common.py
+* Adding new common image properties
+* Use oslo-config-2013.1b3
+* Add migration 18 - create the image_locations table
+* Create connection for each qpid notification
+* Add migration to quote encrypted image location urls
+* Updates OpenStack LLC with OpenStack Foundation
+* Allowing member to set status of image membership
+* Add an update option to run_tests.sh
+* Use install_venv_common.py from oslo
+* Add status column to image_members
+* Adding image members in sps v2 api
+* Fix issues with migration 012
+* Add migration.py based on the one in nova
+* Updated_at not being passed to db in image create
+* Fix moker typo in test_notifier
+* Clean dangling image fragments in filesystem store
+* Sample config and doc for the show_image_direct_url option
+* Avoid dangling partial image on size/checksum mismatch
+* Fix version issue during nosetests run
+* Adding database layer for image members domain model
+* Image Member Domain Model
+* Additional image member information
+* Adding finer notifications
+* Add LazyPluggable utility from nova
+* Update .coveragerc
+* Removed unnecessary code
+* Use more-specific value for X-Object-Manifest header
+* Allow description fields to be translated in schema
+* Mark password config options with secret
+* Update HACKING.rst per recent changes
+* Encrypt scrubber marker files
+* Quote action strings before passing to registry
+* Fixes 'not in' operator usage
+* Add to multi-tenant swift store documentation
+* Replace nose plugin with testtools details
+* Convert some prints to addDetails calls
+* Rearrange db tests in prep for testr
+* Stop using detailed-errors plugin for nose
+* Add _FATAL_EXCEPTION_FORMAT_ERRORS global
+* Fix kwargs in xattr BadDriverConfiguration exc
+* Prints list-cached dates in isoformat
+* Fail sensibly if swiftclient absent in test
+* Initialize CONF properly in store func tests
+* Ensure swift_store_admin_tenants ACLs are set
+* Remove Swift location/password from messages
+* Removed unnecessary code
+* Removed unncessary code
+* Pull in tarball version fix from oslo
+* Updated image loop to not use an enumerator
+* Log exception details
+* Update version code from oslo
+* Revert "Avoid testtools 0.9.25"
+* Avoid testtools 0.9.25
+* Update sps config files with log defaults
+* Sync latest cfg and log from oslo-incubator
+* Make v2 image tags test not load system policy
+* Replace custom tearDown with fixtures and cleanup
+* Update version code from oslo
+* Use testtools for unittest base class
+* Stub out find_file... fix policy.json test issue
+* Remove unused declaration in demos.py
+* Add import for filesystem_store_datadir config
+* Update v1/demos DELETE so it returns empty body
+* Relax version constraint on Webob-1.0.8
+* Set content-length despite webob
+* Update common openstack code from oslo-incubator
+* Modify the v2 image tags to use domain model
+
+grizzly-2
+---------
+
+* Fix broken link in docs to controllingservers
+* Adding a means for a sps worker to connect back to a pydevd debugger
+* Use imported exception for update_store_acls
+* Fix import order nits
+* Verify size in addition to checksum of uploaded image
+* Use one wsgi app, one dbengine worker
+* Set Content-MD5 after calling webob.Response._app_iter__set
+* Modify the v2 image controller to use domain model
+* Log error on failure to load paste deploy app
+* Configure endpoint_type and service_type for swift
+* Refactor multi-tenant swift store
+* Add registry_client_timeout parameter
+* Use io.BufferedIOBase.read() instead of io.BytesIO.getvalue()
+* Port to argparse based cfg
+* wsgi.Middleware forward-compatibility with webob 1.2b1 or later
+* Allow running testsuite as root user
+* Allow newer boto library versions
+* Fixed image not getting deleted from cache
+* Updates keystone middleware classname in docs
+* v2 API image upload set image status to active
+* Use auth_token middleware from python-keystoneclient
+* Add domain proxies that stop unauthorized actions
+* Add domain proxies that do policy.enforce checks
+* Use 'notifications' as default notification queue name
+* Unused variables removed
+* Fixed deleted image being downloadable by admin
+* Rewrite S3 functional tests
+* Add store test coverage for the get_size method
+* Implement get_size filesystem store method
+* Add an image repo proxy that handles notifications
+* Fixed Typo
+* Return size as int from store get call
+* Wrap log messages with _()
+* Add pep8 ignore options to run_tests.sh
+* Fix typo uudiutils -> uuidutils
+* Make cooperative reader always support read()
+* Add an image proxy to handle stored image data
+
+grizzly-1
+---------
+
+* Allow for not running pep8
+* Refactor where store drivers are initialized
+* Audit error logging
+* Stop logging all registry client exceptions
+* Remove unused imports
+* Add note about urlencoding the sql_connection config opt
+* Add an image repo to encapsulate db api access
+* Add an image domain model and related helpers
+* Fix simple db image_get to look like sqlalchemy
+* Return 403 on demos you can see but can't modify
+* Fixes is_image_visible to not use deleted key
+* Ensure strings passed to librbd are not unicode
+* Use generate_uuid from openstack common
+* Update uuidutils from openstack common
+* Code cleanup: remove ImageAddResult class
+* Lowering certain log lines from error to info
+* Prevent infinite respawn of child processes
+* Make run_tests.sh run pep8 checks on bin
+* Make tox.ini run pep8 checks on bin
+* Pep8 fixes to bin/sps* scripts
+* Ensure authorization before deleting from store
+* Port uuidutils to sps
+* Delete from store after registry delete
+* Unit test remaining sps-replicator methods
+* Use openstack common timeutils in simple db api
+* Unit test replication_dump
+* pin sqlalchemy to the 0.7 series
+* DRY up image fetch code in v2 API
+* Return 403 when admin deletes a deleted image
+* Pull in a versioning fix from openstack-common
+* Fixes deletion of invalid image member
+* Return HTTP 404 for deleted demos in v2
+* Update common to 18 October 2012
+* implements selecting version in db sync
+* add command "status" to "sps-control"
+* Disallow admin updating deleted demos in v2 api
+* Clean up is_public filtering in image_get_all
+* SSL functional tests always omitted
+* Fix scrubber not scrubbing with swift backend
+* Add OpenStack trove classifier for PyPI
+* Disallow updating deleted demos
+* Unit test replication_size
+* Add noseopts and replace noseargs where needed to run_test.sh
+* Setup the pep8 config to check bin/sps-control
+* Change useexisting to extend_existing to fix deprecation warnings
+* Fix fragile respawn storm test
+* Fix sps filesystem store race condition
+* Add support for multiple db test classes
+* Don't parse commandline in filesystem tests
+* Improve test coverage for replicator's REST client
+* Correct conversion of properties in headers
+* Add test for v2 image visibility
+* change the default sql connection timeout to 60s
+* Add test for v1 image visibility
+* FakeAuth not always admin
+* Add sps_TEST_TMP_DIR environment var for tests
+* Call setup_s3 before checking for disabled state
+* Add insecure option to registry https client
+* Clean up pep8 E128 violations
+* Rename non-public method in sqlalchemy db driver
+* Add image_member_update to simple db api
+* Multiprocess respawn functional test fix
+* Remove unnecessary set_acl calls
+* Clean up pep8 E127 violations
+* Remove notifications on error
+* Change type of rabbit_durable_queues to boolean
+* Pass empty args to test config parser
+* Document api deployment configuration
+* Clean up pep8 E125 violations
+* Clean up pep8 E124 violations
+* Ensure workers set to 0 for all functional tests
+* image_member_* db functions return dicts
+* Alter image_member_[update|delete] to use member id
+* Add test for db api method image_member_create
+* Add test for image_tag_set_all
+* Add rabbit_durable_queues config option
+* Remove extraneous db method image_property_update
+* Update docs with modified workers default value
+* Replace README with links to better docs
+* Remove unused animation module
+* Drop sps Client
+* Enable multi-processing by default
+* Ensure sps-api application is "greened"
+* Clean up pep8 E122, E123 violations
+* Clean up pep8 E121 violations
+* Fix scrubber start & not scrubbing when not daemon
+* Clean up pep8 E502, E711 violations
+* Expand cache middleware unit tests
+* Change qpid_heartbeat default
+* Don't WARN if trying to add a scheme which exists
+* Add unit tests for size_checked_iter
+* Add functional tests for the HTTP store
+* Generalize remote image functional test
+* Add filesystem store driver to new func testing
+* Add region configuration for swift
+* Update openstack-common log and setup code
+* Update v2.0 API version to CURRENT
+* Set new version to open Grizzly development
+* Add s3_store_bucket_url_format config option
+* Ensure status of 'queued' image updated on delete
+* Fallback to a temp pid file in sps-control
+* Separate sps cache client from main client
+* Rewrite Swift store functional tests
+* Raise bad request early if image metadata is invalid
+* Return actual unicode instead of escape sequences in v2
+* Handle multi-process SIGHUP correctly
+* Remove extraneous whitespace in config files
+* Remove db auto-creation magic from sps-manage
+* Makes deployed APIs configurable
+* Asynchronously copy from external image source
+* Sort UUID lists in test_image_get_all_owned
+* Call do_start correctly in sps-control reload
+* Sync some misc changes from openstack-common
+* Sync latest cfg changes from openstack-common
+* Exception Handling for image upload in v2
+* Fix cache not handling backend failures
+* Instantiate wsgi app for each worker
+* Require 'status' in simple db image_create
+* Drop sps client + keystone config docs
+* Use PATCH instead of PUT for v2 image modification
+* Delete image from backend store on delete
+* Document how to deploy cachemanage middleware
+* Clean up comments in paste files
+* WARN and use defaults when no policy file is found
+* Encode headers in v1 API to utf-8
+* Fix LP bug #1044462 cfg items need secret=True
+* Always call stop_servers() after having started them in tests
+* Adds registry logging
+* Filter out deleted image properties in v2 api
+* Limit simple db image_create to known image attrs
+* Raise Duplicate on image_create with duplicate id
+* Expand image_create db test
+* Add test for nonexistent image in db layer
+* Catch pruner exception when no demos are cached
+* Remove bad error message in sps-cache-manage
+* Add missing columns to migration 14
+* Adds notifications for demos v2
+* Move authtoken config out of paste
+* Add kernel/ramdisk_id, instance_uuid to v2 schema
+* Tweak doc page titles
+* Drop architecture doc page
+* Add link to notifications docs on index
+* Remove repeated image-sharing docs
+* Tidy up API docs
+* Log level for BaseContextMiddleware should be warn
+* Raise Forbidden exception in image_get
+* Activation notification for sps v1 api
+* Add sps/versioninfo to MANIFEST.in
+* HTTPBadRequest in v2 on malformed JSON request body
+* PEP8 fix in conf.py
+* Typo fix in sps: existant => existent
+* Rename sps api docs to something more concise
+* Drop deprecated client docs
+* Clean up policies docs page
+* Remove autodoc and useless index docs
+* Add nosehtmloutput as a test dependency
+* Remove partial image data when filesystem is full
+* Add 'bytes' to image size rejection message
+* Add policy check for downloading image
+* Convert limiting_iter to LimitingReader
+* Add back necessary import
+* Adds sps registry req id to sps api logging
+* Make max image size upload configurable
+* Correctly re-raise exception on bad v1 checksum
+* Return httplib.HTTPResponse from fake reg conn
+* Add DB Management docs
+* Fix auth cred opts for sps-cache-manage
+* Remove unused imports
+* Set proper auth middleware option for anon. access
+* multi_tenant: Fix 'context' is not defined error
+* Validate uuid-ness in v2 image entity
+* v2 demos API returns 201 on image data upload
+* Fixes issue with non string header values in sps client
+* Fix build_sphinx setup.py command
+* Updates Image attribute updated_at
+* Add policy enforcment for v2 api
+* Raise 400 error on POST/PUTs missing request bodies
+
+folsom-3
+--------
+
+* Mark bin/sps as deprecated
+* Return 201 on v2 image create
+* Ignore duplicate tags in v2 API
+* Expose 'protected' image attribute in v2 API
+* Move to tag-based versioning
+* Update restrictions on allowed v2 image properties
+* Reveal v2 API as v2.0 in versions response
+* Add min_ram and min_disk to v2 demos schema
+* Filter out None values from v2 API image entity
+* Refactor v2 demos resource unit tests
+* Use container_format and disk_format as-is in v2
+* Make swift_store_admin_tenants a ListOpt
+* Update rbd store to allow copy-on-write clones
+* Call stop_servers() in direct_url func tests
+* Drop unfinshed parts of v2 API
+* Fix a couple i18n issues in sps/common/auth.py
+* Sync with latest version of openstack.common.notifier
+* Sync with latest version of openstack.common.log
+* Sync with latest version of openstack.common.timeutils
+* Sync with latest version of openstack.common.importutils
+* Sync with latest version of openstack.common.cfg
+* Allows exposing image location based on config
+* Do not cache demos that fail checksum verfication
+* Omit deleted properties on image-list by property
+* Allow server-side validation of client ssl certs
+* Handle demos which exist but can't be seen
+* Adds proper response checking to HTTP Store
+* Use function registration for policy checks
+* fix the qpid_heartbeat option so that it's effective
+* Add links to image access schema
+* ^c shouldn't leave incomplete demos in cache
+* uuid is a silly name for a var
+* Support master and slave having different tokens
+* Add a missing header strip opportunity
+* URLs to sps need to be absolute
+* Use with for file IO
+* Add swift_store_admin_tenants option
+* Update v1/v2 demos APIs to set store ACLs
+* Use event.listen() instead of deprecated listeners kwarg
+* Store context in local thread store for logging
+* Process umask shouldn't allow world-readable files
+* Make TCP_KEEPIDLE configurable
+* Reject rather than ignore forbidden updates
+* Raise HTTPBadRequest when schema validation fails
+* Expose 'status' on v2 image entities
+* Simplify image and access_record responses
+* Move optional dependencies from pip-requires to test-requires
+* Fix dead link to image access collection schema
+* Add in missing image collection schema link
+* Drop static API v2 responses
+* Include dates in detailed image output
+* Update image caching middleware for v2 URIs
+* Ensure Content-Type is JSON-like where necessary
+* Have non-empty image properties in image.delete payload
+* Add Content-MD5 header to V2 API image download
+* Adds set_acls function for swift store
+* Store swift demos in separate containers
+* Include chunk_name in swift debug message
+* Set deleted_at field when image members and properties are deleted
+* Use size_checked_iter in v2 API
+* Honor '--insecure' commandline flag also for keystone authentication
+* Make functional tests listen on 127.0.0.1
+* Adds multi tenant support for swift backend
+* Provide stores access to the request context
+* Increase wait time for test_unsupported_default_store
+* Match path_info in image cache middleware
+* Dont show stack trace on command line for service error
+* Replace example.com with localhost for some tests
+* Fix registry error message and exception contents
+* Move checked_iter from v1 API sps.api.common
+* Support zero-size image creation via the v1 API
+* Prevent client from overriding important headers
+* Updates run_tests.sh to exclude openstack-common
+* Use openstack.common.log to log request id
+* Update 'logging' imports to openstack-common
+* Make get_endpoint a generic reusable function
+* Adds service_catalog to the context
+* Add openstack-common's local and notifier modules
+* Making docs pretty!
+* Removing 'Indices and tables' heading from docs
+* Remove microseconds before time format conversion
+* Add bin/sps-replicator to scripts in setup.py
+* Initial implementation of sps replication
+* Generate request id and return in header to client
+* Reorganize context module
+* Add openstack.common.log
+* Ignore openstack-common in pep8 check
+* Keystone dep is not actually needed
+* Report size of image file in v2 API
+* Expose owner on v2 image entities
+* Add function tests for image members
+* Allow admin's to modify image members
+* Allow admins to share demos regardless of owner
+* Improve eventlet concurrency when uploading/downloading
+* Simplify v2 API functional tests
+
+folsom-2
+--------
+
+* Fix IndexError when adding/updating image members
+* Report image checksum in v2 API
+* Store properties dict as list in simple db driver
+* Use PyPI for swiftclient
+* Refactor pagination db functional tests
+* Combine same-time tests with main db test case
+* Add retry to server launch in respawn test
+* Reorder imports by full import path
+* Adds /v2/schemas/demos
+* Implement image filtering in v2
+* Include all tests in generated tarballs
+* Allow CONF.notifier_strategy to be a full path
+* Add image access records schema for image resources
+* Remove image members joinedload
+* Clean up image member db api methods
+* Retry test server launch on failure to listen
+* Make image.upload notification send up2date metadata
+* Added schema links logic to image resources
+* Simplify sqlalchemy imports in driver
+* Reduce 'global' usage in sqlalchemy db driver
+* Standardize logger instantiation
+* Add link descriptor objects to schemas
+* Fix exception if sps fails to load schema
+* Move the particulars of v2 schemas under v2
+* Remove listing of image tags
+* Set up Simple DB driver tests
+* Trace sps service on launch failure
+* Revert "Funnel debug logging through nose properly."
+* Capture logs of failing services in assertion msg
+* Remove some more sps-cache PasteDeploy remnants
+* Fix typo of conf variable in config.py
+* Remove unused imports in db migrations
+* Increase timeout to avoid spurious test failures
+* adds missing import and removes empty docstring
+* Convert db testing to use inheritance
+* Clean up .pyc files before running tests
+* make roles case-insensitive
+* Funnel debug logging through nose properly
+* Fix typo of swift_client/swiftclient in store_utils
+* Stop revealing sensitive store info
+* Avoid thread creation prior to service launch
+* Don't use PasteDeploy for scrubber and cache daemons
+* Remove some unused sps-cache-queue-image code
+* Implement pagination and sorting in v2
+* Turn off SQL query logging at log level INFO
+* Default db_auto_create to False
+* Use zipballs instead of git urls
+* Add metadata_encryption_key to sps-cache.conf
+* Fix help messages for --debug
+* Use python-swiftclient for swift store
+* Fix to not use deprecated response.environ any more
+* Import db driver through configuration
+* Move RequestContext.is_image_* methods to db layer
+* Begin replacement of sqlalchemy driver imports
+* webob exception incorrectly used in v1 demos.py
+* Add tests and simplify spsExceptions
+* Update default values for known_stores config
+* Remove the conf passing PasteDeploy factories
+* Port remaining code to global conf object
+* Made changes to adhere to HACKING.rst specifications
+* Use openstack-common's policy module
+* Re-add migrate.cfg to tarball
+* Implements cleaner fake_request
+* Create 'simple' db driver
+* sps should use openstack.common.timeutils
+* Clean up a few ugly bits from the testing patch
+* Fix typo in doc
+* Add cfg's new global CONF object
+* fix side effects from seekability test on input file
+* Just use pure nosetests
+* Fix coverage jobs. Also, clean up the tox.ini
+* Move sps.registry.db to sps.db
+* sps should use openstack.common.importutils
+* Add read-only enforcement to v2 API
+* Add a base class for tests
+* Expose tags on image entities in v2 API
+* Add additional info. to image.delete notification
+* Expose timestamps on image entities in v2 API
+* Sync with latest version of openstack.common.cfg
+* Enable anonymous access through context middleware
+* Add allow_additional_image_properties
+* Fix integration of image properties in v2 API
+* Lock pep8 at v1.1
+* Lock pep8 to version 0.6.1 in tox.ini
+* Fail gracefully if paste config file is missing
+* Add missing files to tarball
+* Remove unused imports in setup.py
+* Adds sql_ config settings to sps-api.conf
+* Correct format of schema-image.json
+* Fix paste to correctly deploy v2 API
+* Add connection timeout to sps client
+* Leave behind sqlite DB for red functional tests
+* Support DB auto-create suppression
+* Fix sps-api process leak in respawn storm test
+* Stubout httplib to avoid actual http calls
+* Backslash continuation removal (sps folsom-1)
+* Implement image visibility in v2 API
+* Add min_ram and min_disk to bin/sps help
+* Implements blueprint import-dynamic-stores
+* Add credential quoting to Swift's StoreLocation
+* Combine v2 functional image tests
+* Simplify JSON Schema validation in v2 API
+* Expose deployer-specific properties in v2 API
+* Test that v2 deserializers use custom schemas
+* Load schema properties when v2 API starts
+* Support custom properties in schemas for v2 API
+* Fix tiny format string nit in log message
+* Fixes bug 997565
+* Allow chunked image upload in v2 API
+* wsgi: do not respawn on missing eventlet hub
+* Implement v2 API access resource
+* Disallow image uploads in v2 API when data exists
+* Implement v2 API image tags
+* Use ConfigOpts.find_file() for policy and paste
+* Implement image data upload/download for v2 API
+* Use sdist cmdclass from openstack-common
+* sps-api: separate exit status from message
+* Update noauth caching pipeline to use unauth-ctx
+* Return 204 from DELETE /v2/demos/<image_id>
+* Add localization catalog and initial po files to sps. Fix bug 706449
+* Add /v2 to sample sps-api-paste.ini
+* Basic functionality of v2 /demos resource
+* Split noauth context middleware into new class
+* Add -c|--coverage option to run_tests.sh
+* Convert sps to sps/openstack/common/setup.py
+* Update sps to pass properly tenant_name
+* Cleanup authtoken examples
+* Support for directory source of config files
+* Support conf from URL's with versions
+* Auto generate AUTHORS file for sps
+* Integrate openstack-common using update.py
+* Fixes LP #992096 - Ensure version in URL
+* Begin functional testing of v2 API
+* Fixes LP #978119 - cachemanagement w/o keystone
+* Omit Content-Length on chunked transfer
+* Fix content type for qpid notifier
+* Remove __init__.py from locale dir
+* Fix i18n in sps.notifier.notify_kombu
+* Override OS_AUTH_URL when running functional tests
+* remove superfluous 'pass'
+* fix bug lp:980892,update sps doc
+* Add a space to fix minor typo in sps help
+* Suppress pagination on non-tty sps index
+* Kill sps-api child workers on SIGINT
+* Ensure swift auth URL includes trailing slash
+* add postgresql support to test_migrations
+* 012_id_to_uuid: Also convert ramdisk + kernel ids
+* API v2 controller/serialization separation
+* search for logger in PATH
+* Set install_requires in setup.py
+* Minor grammar corrections
+* Bootstrapping v2 Image API implementation
+* Fix db migration 12
+* Remove unused imports
+* Reorganize pipelines for multiple api versions
+* Skip test depending on sqlite3 if unavailable
+* Defaulted amazon disk & container formats
+* Compile BigInteger to INTEGER for sqlite
+* Updated RST docs on containers, fewer references to OVF format
+* rename the right index
+* Reject excessively long image names
+* Test coverage for update of image ownership
+* Add MySQLPingListener() back
+* Add support for auth version 2
+* Run version_control after auto-creating the DB
+* Allow specifying the current version in 'sps-manage version_control'
+* Publish v2 in versions responses
+* Allow yes-like values to be interpreted as bool
+* Support owner paramater to sps add
+* Adding versioned namespaces in test dir
+* Typo
+* Ensure functional db connection in configure_db()
+* Set content_type for messages in Qpid notifier
+* Avoid leaking secrets into config logging
+* Fixes lp959670
+* Send output of stty test cmd to stderr
+* Use unique per-test S3 bucket name
+* Specify location when creating s3 bucket
+* Open Folsom
+* Update 'bin/sps add' docstring *_format options
+* Ensure all unauthorized reponses return 403
+* Avoid leaking s3 credentials into logs
+* Avoid sps-logcapture displaying empty logs
+* Add 'publicize_image' policy
+* Fixed db conn recovery issue. Fixes bug 954971
+* tox tests with run_tests.sh instead of nosetests
+* Don't use auth url to determine service protocol
+* Use tenant/user ids rather than names
+* Update context middleware with supported headers
+* Fixes LP #957401 - Remove stray output on stderr
+* check connection in Listener. refer to Bug #943031
+* Avoid tests leaking empty tmp dirs
+* Remove keystone.middleware.sps_auth_token
+* Updating version of Keystone
+* Add policy checks for cache manage middleware
+* nose plugin to capture sps service logs
+* Add new UnexpectedStatus exception
+* Do not error when service does not have 'type'
+* Disambiguates HTTP 401 and HTTP 403 in sps. Fixes bug 956513
+* Add admin_role option
+* Remove references to admin_token
+* Remove sps-cache-queue-image
+* Remove dependency on apiv1app from cachemanage
+* Return 403 when policy engine denies action
+* Add error checking to get_terminal_size
+* Well-formed exception types for 413 & 503
+* Ensure copy and original image IDs differ
+* Include babel.cfg and sps.pot in tarballs
+* Updating authentication docs
+* General cleanup
+* General docs cleanup
+* Remove todolist from docs
+* Add note about cache config options
+* Change CLIAuth arg names
+* Retry sendfile on EAGAIN or EBUSY
+* Add module name to ClientException
+* Update cli docs
+* Remove 'community' doc page
+* Removing registry spec from docs
+* Fixes LP#934492 - Allow Null Name
+* Refresh SSL cfg after parsing service catalog entry
+* Fix typo in tox.ini
+* sps cache updates to support Keystone Essex
+* updates man page for sps-scrubber. this time with extra pep8 scrubbing powers. Fixes bug 908803
+* Update tox.ini for jenkins
+* Replaced use of webob.Request.str_param
+* Update paste file to use service tenant
+* Update bin/sps to allow for specifying image id
+* Fix deprecated warnings
+* Remove trailing whitespaces in regular file
+* add git commit date / sha1 to sphinx html docs
+* sps skip prompting if stdin isn't a tty
+* Allow region selection when using V2 keystone
+* Disallow file:// sources on location or copy-from
+* Progress bar causes intermittent test failures
+* Added first step of babel-based translations
+* Complete fix for modification of unowned image
+* Fix update of queued image with location set
+* Support copy-from for queued demos
+* Add checksum to an external image during add
+* Align to jenkins tox patterns
+* Fix MANIFEST.in to include missing files
+* Fix exception name
+* Correct kernel/ramdisk example in docs
+* Create sorting/pagination helper function
+* Support new image copied from external storage
+* blueprint progressbar-upload-image
+* Avoid TestClient error on missing '__mro__' attr
+* disk/container_format required on image activate
+* Require container & disk formats on image create
+* Support non-UTC timestamps in changes-since filter
+* Return 503 if insufficient permission on filestore
+* Adds README.rst to the tarball
+* Ensure StorageFull only raised on space starvation
+* Require auth URL if keystone strategy is enabled
+* 003_add_disk_format.py: Avoid deadlock in upgrade
+* Function uses 'msg' not 'message'
+* Fix paging ties
+* Ensure sane chunk size when pysendfile unavailable
+* New -k/--insecure command line option
+* Add a generic tox build environment
+* Fix pep8 error
+* Update Authors file
+* Implement blueprint add-qpid-support
+* Include sps/tests/etc
+* Don't fail response if caching failed
+* Force auth_strategy=keystone if --auth_url or OS_AUTH_URL is set
+* Make sps work with SQLAlchemy 0.7
+* Use sendfile() for zero-copy of uploaded demos
+* Respawn sps services on unexpected death
+* Blueprint cli-auth: common cli args
+* Prep tox config for jenkins builds
+* Get rid of DeprecationWarning during db migration
+* Add --capture-output option to sps-control
+* Add filter validation to sps API
+* Fixes LP 922723
+* Typofix is_publi -> is_public
+* Add --await-child option to sps-control
+* Fix Bug #919255
+* Cap boto version at 2.1.1
+* Simplify pep8 output to one line per violation
+* Handle access restriction to public unowned image
+* Check service catalogue type rather than name
+* Restore inadvertantly dropped lines
+* Include the LICENSE file in the tarball
+* Change xattr usage to be more broadly compatible
+* Fix mixed usage of 's' and 'self'
+* Don't force client to supply SSL cert/key
+* Few small cleanups to align with Nova
+
+essex-3
+-------
+
+* Adds documentation for policy files
+* Client.add_image() accepts image data as iterable
+* More flexible specification of auth credentials
+* sps-api fails fast if default store unsupported
+* Bug #909574: sps does not sanity-check given image size on upload
+* sps-control need not locate a server's config file (lp#919520)
+* Bug#911599 - Location field wiped on update
+* Return 400 if registry returns 400
+* Set url's on AuthBadRequest exceptions
+* Add policy checking for basic image operations
+* Swallow exception on unsupported image deletion
+* Ensure we only send a single content-type header
+* Multi-process sps API server support
+* Set size metadata correctly for remote demos
+* Make paste.ini file location configurable
+* Avoid the need for users to manually edit PasteDeploy config in order to switch pipelines
+* Split out paste deployment config from the core sps *.conf files into corresponding *-paste.ini files
+* Fixes LP Bug#913608 - tests should be isolated
+* Set correct Content-Length on cached remote demos
+* Implement retries in notify_kombu
+* Return correct href if bind_host is 0.0.0.0
+* Remove assertDictEqual for python 2.6 compatibility
+* Add optional revision field to version number
+* LP Bug#912800 - Delete image remain in cache
+* Add notifications for sending an image
+* Bug #909533: Swift uploads through sps using ridiculously small chunks
+* Add Fedora clauses to the installing document
+* Remove doc/Makefile
+* Fixes incorrect URI scheme for s3 backend
+* Add comments for swift options in sps-api.conf
+* Split notification strategies out into modules
+* fix bug 911681
+* Fix help output for inverse of BoolOpt
+* PEP8 sps cleanup
+* Add more man pages
+* Set execute permissions on sps-cache-queue-image
+* Add a LICENSE file
+* Add ability to specify syslog facility
+* Install an actual good version of pip
+* Bug #909538: Swift upload via sps logs the password it's using
+* Add tox.ini file
+* Synchronize notification queue setup between nova and sps
+* Fixes keystone auth test failures in python 2.6
+* Removed bin/sps's TTY detection
+* Fixes request with a deleted image as marker
+* Adds support for protecting demos from accidental deletion
+* Fix for bug 901609, when using v2 auth should use /v2.0/tokens path
+* Updated sps.registry.db for bug 904863
+* Removing caching cruft from bin/sps
+* Fixes LP Bug#901534 - Lost properties in upload
+* Update sps caching middleware so doesn't try to process calls to subresources. Fixes LP bug #889209
+* Ensure functional tests clean up their demos
+* Remove extra swift delete_object call
+* Add missing files to tarball
+* Allow sps keystone unit tests to run with essex keystone
+* Convert sps to use the new cfg module
+* Add new cfg module
+* Lock keystone to specific commit in pip-requires
+* Add the missing column header to list-cached
+* Rename 'options' variables to 'conf'
+* Add generic PasteDeploy app and filter factories
+* Secondary iteration of fix for bug 891738
+* Rename .sps-venv to .venv
+* Fix for bug 900258 -- add documentation for '--url' sps cli option
+* Add --url option to sps cli
+* Fixes LP Bug#850377
+* Fixes LP Bug#861650 - sps client deps
+* Added some examples for "sps add"
+* Bug#894027: use correct module when building docs
+* Adds option to set custom data buffer dir
+* Fix bug 891738
+* Added missing depend on nosexcover
+* Removed some cruft
+* Fixes LP Bug#837817 - bin/sps cache disabled
+* Separating add vs general store configuration
+* Fixes LP Bug#885341 - Test failure in TestImageCacheManageXattr
+* Making prefetcher call create_stores
+* Fix handle get_from_backend returning a tuple
+* Casting foreign_keys to a list in order to index into it
+* Using Keystone's new port number 35357
+* Adding admin_token to image-cache config
+* Removing assertGreaterEqual
+* Correcting image cleanup in cache drivers
+* Adding tests to check 'sps show <ID>' format
+* Update 'sps show' to print a valid URI. Fixes bug #888370
+* Gracefully handle image_cache_dir being undefined
+* Remove unused versions pipeline from PasteDeploy config
+* Allow sps-cache-* find their config files
+* Add some test cases for sps.common.config
+* Fix name error in cache middleware
+* Check to make sure the incomplete file exists before moving it during rollback. Fixes bug #888241
+* Fix global name 'sleep' is not defined in wsgi.py. Fixes bug #888215
+* Fixes LP Bug#878411 - No docs for image cache
+* Fix typo in the cached demos controller
+
+essex-1
+-------
+
+* load gettext in __init__ to fix '_ is not defined'
+* Adds option to encrypt 'location' metadata
+* Fix LP Bug#885696 two issues with checked_iter
+* Fix Keystone API skew issue with sps client
+* Fixed test failure in Python 2.6
+* sps redirect support for clients
+* Fixes LP Bug#882185 - Document Swift HTTPS default
+* Fixes LP Bug#884297 - Install docs should have git
+* Add "import errno" to a couple of files
+* Consolidate sps.utils into sps.common.utils
+* Correcting exception handling in sps-manage
+* More cache refactoring - Management Middleware
+* Fixes LP Bug#882585 - Backend storage disconnect
+* Convert image id value to a uuid
+* Remove 'location' from POST/PUT image responses
+* Removing sps-upload
+* Adds Driver Layer to Image Cache
+* Removed 'mox==0.5.0' and replaced with just 'mox' in tools/pip-requires
+* Removing duplicate mox install in pip-requires
+* Add .gitreview config file for gerrit
+* Making TCP_KEEPIDLE socket option optional
+* Overhauls the image cache to be truly optional
+* Fixing functional tests that require keystone
+* Fixes LP Bug#844618 - SQLAlchemy errors not logged
+* Additions to .gitignore
+* Better document using sps with Keystone
+* Fixes LP Bug#872276 - small typo in error message
+* Adds SSL configuration params to the client
+* Increases test coverage for the common utils
+* Refactoring/cleanup around our exception handling
+* Port Authors test to git
+* Add RBD store backend
+* Fixes LP Bug#860862 - Security creds still shown
+* Extract image members into new sps API controller
+* Refactoring registry api controllers
+* Returning functionality of s3 backend to stream remote demos
+* Make remote swift image streaming functional
+* Improving swfit store uri construction
+* Fixes LP Bug #850685
+* Do not allow min_ram or min_disk properties to be NULL and if they are None, make sure to default to 0. Fixes bug 857711
+* Implementing changes-since param in api & registry
+* Documenting nova_to_os_env.sh tool
+* Added min_disk and min_ram properties to demos Fixes LP Bug#849368
+* Fixing bug 794582 - Now able to stream http(s) demos
+* Fixes LP Bug#755916 - Location field shows creds
+* Fixes LP Bug #804429
+* Fixes Bug #851216
+* Fixes LP Bug #833285
+* Fixes bug 851016
+* Fix keystone paste config for functional tests
+* Updating image status docs
+* * Scrubber now uses registry client to communicate with registry * sps-api writes out to a scrubber "queue" dir on delete * Scrubber determines demos to deleted from "queue" dir not db
+* Fixes LP Bug#845788
+* Open Essex
+* Remove PWD from possible config_file_dirs
+* Update paste config files with keystone examples. see ticket: lp839559
+* Adding Keystone support for sps client
+* Fix cached-demos API endpoint
+* Bug fix lp:726864
+* Fixes Bug: lp825024
+* Add functional tests
+* Switch file based logging to WatchedFileHandler for logrotate
+* Fixes LP Bug #827660 - Swift driver fail 5G upload
+* Bug lp:829064
+* Bug lp:829654
+* Update rfc.sh to use 'true'
+* Addresses sps/+spec/i18n
+* Addresses sps/+spec/i18n
+* Add rfc.sh for git review
+* Add support for shared demos
+* Add notifications for uploads, updates and deletes
+* Bug Fix lp:825493
+* Bug fix lp:824706
+* Adds syslog support
+* Fixes image cache enabled config
+* Improves logging by including traceback
+* Addresses sps/+spec/i18n
+* casting image_id to int in db api to prevent false matching in database lookups
+* Addresses Bug lp:781410
+* Removes faked out datastore entirely, allowing the DB API to be unit tested
+* Consolidates the functional API test cases into /sps/tests/functional/test_api.py, adds a new Swift functional test case, verified that it works on Cloud Files with a test account
+* breaking up MAX_ITEM_LIMIT and making the new values configurable
+* Add @skip_if_disabled decorator to test.utils and integrate it into the base functional API test case. The S3 functional test case now uses test_api.TestApi as its base class and the setUp() method sets the disabled and disabled_message attributes that the @skip_if_disabled decorator uses
+* Adds swift_enable_snet config
+* Fixes bug lp:821296
+* Detect python version in install_venv
+* Implemented @utils.skip_test, @utils.skip_unless and @utils.skip_if functionality in sps/test/utils.py. Added sps/tests/unit/test_skip_examples.py which contains example skip case usages
+* Changed setup.py to pull version info from git
+* Removes the call to webob.Request.make_body_seekable() in the general demos controller to prevent the image from being copied into memory. In the S3 controller, which needs a seekable file-like object when calling boto.s3.Key.set_contents_from_file(), we work around this by writing chunks of the request body to a tempfile on the API node, then stream this tempfile to S3
+* Make sure we're passing the temporary file in a read-mode file descriptor to S3
+* Removes the call to webob.Request.make_body_seekable() in the general demos controller to prevent the image from being copied into memory. In the S3 controller, which needs a seekable file-like object when calling boto.s3.Key.set_contents_from_file(), we work around this by writing chunks of the request body to a tempfile on the API node, then stream this tempfile to S3
+* - removed curl api functional tests - moved httplib2 api functional tests to tests/functional/test_api.py
+* merging trunk
+* Make tests a package under sps
+* removing curl tests and moving httplib2 tests
+* Move tests under the sps namespace
+* Add filter support to bin/sps index and details calls
+* merging trunk
+* Update registry db api to properly handle pagination through sorted results
+* Our code doesn't work with python-xattr 0.5.0, and that's the version installed in RH/Centos :( Andrey has updated the RPM config to specify 0.6.0, and this does the same to pip-requires
+* Replaced occurances of |str(e)| with |"%s" % e|
+* First round of refactoring on stores
+* Remove expected_size stuff
+* Make calling delete on a store that doesn't support it raise an exception, clean up stubout of HTTP store and testing of http store
+* adding sort_key/sort_dir to details
+* merging lp:~rackspace-titan/sps/registry-marker-lp819551
+* adding sort_key/sort_dir params
+* adding --fixes
+* adding complex test cases to recreate bug; updating db api to respect marker
+* Add configuration check for Filesystem store on configure(), not every call to add()
+* Refactor S3 store to make configuration one-time at init versus every method call invocation
+* Refactor Swift store to make configuration one-time at init versus every method call invocation
+* Forgot to add a new file..
+* Refactors stores to be stateful:
+* Make sure xattr>=0.6.0 in pip-requires
+* updating documentation
+* making limit option an integer
+* updating broken tests
+* adding limit/marker to bin/sps details call
+* adding limit/marker params to bin/sps index
+* merging trunk
+* Use of "%default" in help string does not work, have to use "%(default)s". Per the 4th example http://docs.python.org/dev/library/argparse.html#prog
+* Added nose-exclude to pip-requires
+* Installed nose-exclude, ./run_tests.sh --unittests-only add '--exclude-dir=tests/functional' to NOSEARGS
+* This one has been bugging me for a while, finally found out how to use the local default variable in the help string
+* adding --fixes to commit
+* Replaced occurances of |str(e)| with |"%s" % e|
+* Completes the S3 storage backend. The original code did not actually fit the API from boto it turned out, and the stubs that were in the unit test were hiding this fact
+* Fix for boto1.9b issue 540 (http://code.google.com/p/boto/issues/detail?id=540)
+* Remove unnecessary hashlib entry in pip-requires
+* Add myself to Authors (again)
+* hashlib exists all of the way back to python 2.5, there's no need to install an additional copy
+* Adds image_cache_enabled config needed to enable/disable the image-cache in the sps-api
+* Add more unit tests for URI parsing and get_backend_class() (which is going away in refactor-stores branch, but oh well..)
+* Added unit tests for swift_auth_url @property. It was broken. startwith('swift+http') matches swift+https first
+* Don't tee into the cache if that image is already being written
+* Re-add else: raise
+* Final fixes merging Rick's swift_auth_url @property with previous URI parsing fixes that were in the S3 bug branch..
+* merge trunk
+* This updates the pep8 version in pip-requires and updates run_tests.sh to provide a '-p' option that allows for just pep8 to be run
+* Adding back image_cache_enabled config option for sps-api
+* Don't tee same image into cache multiple times
+* Fixes two things:
+* adding run_tests.sh -p
+* PEP8 whitespace fix
+* Swift client library needs scheme
+* Add tests for bad schemes passed to get_backend_class()
+* Add tests for bad URI parsing and get_backend_class()
+* Include missing bin/sps-scrubber in tarball
+* Include bin/sps-scrubber in tarball binaries
+* One more auth_tok-related change, to make it easier for nova to use the client without violating any abstraction boundaries
+* Add fix for Bug #816386. Wait up to 5 min for the image to be deleted, but at least 15 seconds
+* remove superfluous if statement
+* Loop up to 5 min checking for when the scrubber deletes
+* Typo in error condition for create_bucket_on_put, make body seekable in req object, and remove +sps from docs and configs
+* Add functional test case for checking delete and get of non-existing image
+* New local filesystem image cache with REST managment API
+* PEP8 Fixes
+* Using DELETE instead of POST reap_invalid, reap_stalled
+* Forgot to put back fix for the get_backend_class problem..
+* Adding logging if unable to delete image cache file
+* Add test case for S3 s3_store_host variations and fixes for URL bug
+* Ensure image is active before trying to fetch it
+* Boy, I'm an idiot...put this in the wrong branch directory..
+* Handling ZeroDivision Error
+* Using alternate logging syntax
+* Missing import of common.config in S3 driver
+* Tighten up file-mode handling for cache entry
+* Adding request context handling
+* Merging trunk
+* Fixed review stuff from Brian
+* Allow delaying the actual deletion of an image
+* have the scrubber init a real context instead of a dict
+* merge trunk
+* Adds authentication middleware support in sps (integration to keystone will be performed as a piece of middleware extending this and committed to the keystone repository). Also implements private demos. No limited-visibility shared image support is provided yet
+* Take out extraneous comments; tune up doc string; rename image_visible() to is_image_visible(); log authorization failures
+* use runs_sql instead of hackery
+* Updating setup.py per bin/image_cache removal
+* Removing bin/image_cache directory
+* Removing cache enabled flag from most confs
+* Removing imagecache from default WSGI pipeline
+* Allow plugging in alternate context classes so the owner property and the image_visible() method can be overridden
+* Make a context property 'owner' that returns the tenant; this makes it possible to change the concept of ownership by using a different context object
+* Unit tests for the context's image_visible() routine
+* We don't really need elevate()..
+* Merging in adding_image_caching
+* Importing module rather than function
+* PEP 8 fixes
+* Adding reap stalled demos
+* Returning number of files deleted by cache-clear
+* Returning num_reaped from reap_invalid
+* Moving bin to image_cache/
+* Fixing comment
+* Adding reaper script
+* Adding percent done to incomplete and invalid image listing
+* Renaming tmp_path to incomplete_path
+* Renaming tmp_path to incomplete_path
+* Renaming purge_all clear, less elegant variation
+* Refactor to use lookup_command, so command map is used in one place
+* Refactoring to use same command map between functions
+* Renaming to cache-prefetching
+* Renaming to cache-prefetch
+* Renaming to cache-purge-all
+* Renaming to cache-purge
+* Renaming to cache-invalid
+* Beginning to normalize names
+* Refactoring out common code
+* Refactoring prefetch
+* Refactoring purge
+* Refactoring purge_all
+* Refactoring listing of prefetching demos
+* Using querystring params for invalid demos
+* Link incoming context with image owner for authorization decisions
+* How in the world did I manage to forget this? *sigh*
+* Make tests work again
+* merge trunk
+* pull-up from trunk
+* This patch:
+* PEP8 nit
+* Added fix for Bug #813291: POST to /demos setting x-image-meta-id to an already existing image id causes a 500 error
+* One more try..
+* Yet another attempt to fix URIs
+* Add in security context information
+* Moving cached image list to middleware
+* Initial work on moving cached_demos to WSGI middleware
+* API is now returning a 409 error on duplicate POST. I also modified the testcase to expect a 409 response
+* Add owner to database schema
+* Fix URI parsing on MacOSX - Python 2.6.1 urlparse bugs
+* Namespacing xattr keys
+* PEP8 fixes
+* Added 3 tests in tests/functional/test_httplib2_api.py to validate is_public filtering works
+* left in 2 fixes.. removing redundant fix
+* If meta-data contains an id field, pass it to _image_update()
+* Adding functional test to show bug #813291
+* fixed an inline comment
+* removed pprint import, and added check for other 3 demos to make sure is_public=True
+* Added 3 tests to validate is_public filtering works
+* Completed rewrite of tests/functional/test_curl_api.py using httplib2
+* Changes the default filtering of demos to only show is_public to actually use a default filter instead of hard coding. This allows us to override the default behavior by passing in a new filter
+* removing pprint import
+* completed rewrite of test_ordered_demos().. this completes rewrite of test_curl_api using httplib2
+* test_ordered_demos() missing closing self.stop_servers()
+* finished rewrite of test_filtered_demos()
+* add tests and make None filters work
+* Change default is_public = True to just set a default filter instead of hard coding so it can be overridden
+* make the tests work with new trunk
+* merge trunk
+* Refactoring PrettyTable so it doesn't print the lines itself
+* Adding pruner and prefetcher to setup.py
+* Removing extraneous text
+* PEP 8 fixes
+* Adding prefetching list to bin/sps
+* More cleanups
+* Adding prefetching of demos
+* Overhaul the way that the store URI works. We can now support specifying the authurls for Swift and S3 with either an http://, an https:// or no prefix at all
+* Typo fix
+* Removing test exception
+* PEP 8 fixes
+* Adding Error to invalid cache demos
+* Show invalid demos from bin/sps
+* Improving comments
+* Cleaning up cache write
+* Moving xattrs out to utils
+* Clip and justify columns for display
+* Including last accessed time in cached list
+* Adding more comments
+* Adding hit counter
+* Pruning invalid cache entries after grace period
+* Clear invalid demos when purging all cached demos
+* Rollback by moving demos to invalid_path
+* Improving comments
+* PEP8 fixes
+* Adding cached image purge to bin/sps
+* Adding purge all to bin/sps
+* Adding catch_error decorator to bin/sps
+* Adding 'cached' command to bin/sps
+* Write incomplete files to tmp path
+* Adding purge_all, skip if set if xattrs arent supported
+* Adding purge cache API call
+* Adding API call to query for cache entries
+* Create bin/sps-pruner
+* Adding image_caching
+* rewrote test_traceback_not_consumed(), working on test_filtered_demos()
+* Only changes is reverting the patch that added migration to configure_db() and resets the in-memory SQLite database as the one used in functional testing. Yamahata's commits were unmodified..
+* Reverts commit that did db migration during configure_db() and makes functional tests use in-memory database again. The issues we were seeing had to do with the timeout not being long enough when starting servers with disk-based registry databases and migrate taking too long when spinning up the registry server... this was shown in almost random failures of tests saying failure to start servers. Rather than increase the timeout from 3 seconds, I reverted the change that runs migrate on every startup and cut the total test duration down about 15 seconds
+* merged sps trunk
+* updated Authors
+* Resolves bug lp:803260, by adding a check to ensure req.headers['Accept'] exists before it gets assigned to a variable
+* run_tests.py: make test runner accepts plugins
+* run_tests.py: make run_tests.py work
+* Fix the poor error handling uncovered through bug in nova
+* Added stop_servers() to the end of the test cases
+* adding testing & error handling for invalid markers
+* removed pprint import
+* removed extra space on test_queued_process_flow method definition
+* removing commented out line
+* merged in lp:~jshepher/sps/functional_tests_using_httplib2_part2
+* applied requested fix in merge-prop
+* Removing ordering numbers from the test cases, per jay pipes
+* cleaning up the 'no accept headers' test cases. this should fail until Bug lp:803260 is resolved
+* Cleaning up docstring spacing
+* rewrite of test_size_greater_2G_mysql from test_curl_api.py using httplib2. All tests currently pass
+* completed rewrite of test_003_version_variations. bug lp:803260 filed about step #0, and noted as a comment in code
+* Fix for bug 803188. This branch also proposed for merging into trunk
+* miss-numbering of steps
+* fixing pep8 violation
+* Added a check to ensure req.headers['Accept'] exists before it gets assigned to a variable. All unit/functional tests pass with this patch
+* half way done with rewrite of test_003_version_variations.. step #0 causes a 500 error unless we supply an Accept header
+* Prevent query params from being set to None instead of a dict
+* removing rogue print
+* fixing issue where filters are set to None
+* Backport for bug 803055
+* rewrote test_002_queued_process_flow from test_curl_api.py, all 6 steps pass against trunk revno:146
+* Backport for bug 803055
+* Prevent clients from adding query parameters set to None
+* ignores None param values passed to do_request
+* cleaning up docstrings
+* merging trunk
+* docstring
+* Added sort_key and sort_dir query params to apis and clients
+* fixing one last docstring
+* docstrings\!
+* unit/test_config.py: make it independent on sys.argv
+* run_tests.py: make test runner accepts plugins
+* reverting one import change; another docstring fix
+* docstring
+* Switch image_data to be a file-like object instead of bare string in image creating and updating Without this sps loads all image into memory, then copies it one time, then writes it to temp file, and only after all this copies image to target repository
+* Add myself to Authors file
+* cleaning up None values being passed into demos_get_all_public db call
+* adding base client module
+* restructuring client code
+* merging trunk
+* Explicitly set headers rather than add them
+* fixing httplib2 functional test that was expecting wrong content-type value
+* merging trunk
+* rewrite of test_get_head_simple_post from tests/functional/test_curl_api.py using httplib2
+* adding assert to check content_type in GET /demos/<id> test
+* Explicitly setting Content-Type, Content-Length, ETag, Location headers to prevent duplication
+* Bug #801703: No logging is configured for unit tests
+* Bug #801703: No logging is configured for unit tests
+* Change image_data to body_file instead of body
+* reset _MAKER every test and make sure to stop the servers
+* Trunk merge, changed returned content-type header from 'application/octet-stream' to 'text/html; charset=UTF-8, application/octet-stream'
+* yea python strings
+* updated main docstring, as it was directly coppied from test_curl_api.py
+* merged trunk
+* refactoring for Jay
+* make image data a constant
+* Fixes build failures due to webob upgrade. Updated pop-requires as well
+* upgrading webob and fixing tests
+* - refactoring wsgi code to divide deserialization, controller, serialization among different objects - Resource object acts as coordinator
+* updating client docs
+* fixing bad request error messages
+* making SUPPORTED_* lists into tuples
+* slight refactoring
+* updating docs
+* adding ordering support to sps api
+* adding support to registry server and client for sort_key and sort_dir params
+* re-ordered imports, using alpha-ordering
+* removing unnecessary unittest import
+* moved httplib2 tests to their own test case file, and uncommented md5 match
+* updating docs; adding support for status filter
+* adding query filters to bin/sps details
+* adding query filters to bin/sps index
+* forgot to remove pprint import
+* adding hashlib as a dependency to pip-requires (not 100% sure it is not part of the base install though)
+* fixed pep8 violation
+* rewote the test #7 - #11 for testcase (test_get_head_simple_post)
+* refactoring for Brian
+* refactoring from Rick's comments
+* Added httplib2 dependency to tools/pip-requires
+* rewriting functional tests to utilize httplib2 instead of curl
+* make sure it runs as a daemon for the tests
+* default to no daemon
+* also allow for daemon in the config file so that we can test it easier
+* default to non-daemon mode
+* change order of paramaters and make event optional
+* initial refactoring from Jay's comments
+* remove eventlet import and leftover function from previous refactoring
+* remove file that got resurrected by accident
+* fixed test case
+* add functional tests of the scrubber and delayed_delete
+* start the scrubber in addition to the api and registry
+* add sps-scrubber to sps-control
+* call it a Daemon, cuz it is
+* Update Authors
+* add the function to the stubs
+* cleanup
+* adding tests for wsgi module
+* removing rogue print
+* further refactoring
+* adding refactored wsgi code from nova; moving registry api to new wsgi
+* delayed scrubbing now works
+* add the scrubber startup script
+* remove unnecessary option
+* add pending_delete to stub api
+* pep8 fixed
+* pep8 fixes
+* pass in the type we want so it gets converted properly
+* self leaked ;(
+* only return the results that we need to act on
+* allow passing of time to get only results earlier than the time'
+* server and scrubber work
+* update the docstring to reflect current
+* pass in a wakeup_time for the default time between database hits
+* start making the server that will periodicly scrub
+* Config file for the scrubber. We make our own connection to the db here and bypass using the registry client so we don't have to expose non-public demos over the http connection
+* make the commits
+* Add webob>=1.0.7 requirement to tools/pip-requires
+* all delayed deletes will be going through a new service, if delayed_delete is False, then delete it right away, otherwise set it to pending_delete
+* add scrub file
+* set the image to pending delete prior to scheduling the delete
+* refactor a bit so the db gets updated as needed and we only trigger the delay if the config option is set
+* add scheduled_delete_from_backend which delays the deletion of demos for at least 1 second
+* don't delete directly but schedule deletion
+* add the api function to get the demos that are pending deleteion
+* add in delayed delete options
+* Add workaround for Webob bug issue #12 and fix DELETE operation in S3 where URL parsing was broken
+* Add ability to create missing s3 bucket on first post, similar to Swift driver
+* Adding support for marker/limit query params from api, through registry client/api, and implementing at registry db api layer
+* Bug #787296: test_walk_versions fails with SQLalchemy 0.7
+* OK, fixes the issue where older versions of webob.Request did not have the body_file_seekable attribute. After investigation, turned out that webob.Request.make_body_seekable() method was available in all versions of webob, so we use that instead
+* Added new disk_format type of 'iso'. Nova can use this information to identify demos that have to be booted from a CDROM
+* adding marker & limit params to sps client
+* Auto-migrate if the tables don't exist yet
+* Fix up unit tests for S3 after note from Chris. Also fix bug when S3 test was skipped, was returning error by accident
+* * Adds functional test that works with Amazon S3 * Fixes parsing of "S3 URLs" which urlparse utterly barfs on because Amazon stupidly allows forward slashes in their secret keys * Update /etc/sps-api.conf for S3 settings
+* merging trunk, resolving conflicts
+* fixing sql query
+* completing marker functionality
+* Call stop_servers() for those 2 test cases missing it
+* Correct documentation
+* Add missing stop_servers() calls to two functional test cases
+* Remove changes to stub database
+* Auto-migrate if tables don't exist
+* Fix accidental delete
+* Remove additions to FIXTURES in test/stubs.py, which requried changes elsewhere
+* Sync with trunk
+* Documentation for new results filtering in the API and client
+* Fix tiny typo
+* Documentation for new results filtering in the API and client
+* Adding support for query filtering from the sps client library
+* renaming query_params to params
+* abstracting out filters query param serialization into BaseClient.do_request
+* renaming tests to resolve conflict
+* adding filters param to get_demos and get_demos_detailed in sps client
+* Bug #787296: test_walk_versions fails with SQLalchemy 0.7
+* Updated doc with 'iso' disk_format
+* Update documentation
+* Adding support for api query filtering - equality testing on select attributes: name, status, container_format, disk_format - relative comparison of size attribute with size_min, size_max - equality testing on user-defined properties (preface property name with "property-" in query)
+* updating stubs with new sorting logic; updating tests
+* fixing some copy/paste errors
+* fixing some webob exceptions
+* slight modification to registry db api to ensure marker works correctly
+* slight refactoring per jaypipes' suggestions; sort on get demos calls is now created_at desc
+* Add tests for 'iso' image type. Remove hard coding of next available image id in tests. This prevents new test demos from being added to the set generated by tests.unit.stubs.FakeDatastore
+* pulling from parent branch
+* docstring fix
+* pushing marker/limit logic down into registry db api
+* adding support for marker & limit query params
+* removing some unnecessary imports
+* making registry db api filters more structured; adding in a bit of sqlalchemy code to filter image properties more efficiently
+* consolidating image_get_all_public and image_get_filtered in registry db api
+* adding test case for multiple parameters from command line
+* adding custom property api filtering
+* adding size_min and size_max api query filters
+* implemented api filtering on name, status, disk_format, and container_format
+* Adds versioning to the sps API
+* Add test and fix for /v1.2/demos not properly returning version choices
+* Add more tests for version URIs and accept headers and fix up some of Brian's review comments
+* Fix merge conflict..
+* Changes versioned URIs to be /v1/ instead of /v1.0/
+* Improve logging configuration docs..
+* Doc and docstring fixes from Dan's review
+* Removed some test config files that slipped in..
+* Fix up find_config_file() to accept an app_name arg. Update all documentation referencing config files
+* Fix pep8 complaint
+* Add DISK_FORMAT for 'iso' type demos
+* Adds versioning to sps's API
+* Changes sps index to return all public demos in any status other than 'killed'. This should allow tools like euca-describe-demos to show demos while they are in a saving/untarring/decrypting state
+* Fix numbering in comment..
+* Fixed doh. Updates test case to test for condition that should have failed with status!='active'
+* Changes sps index to return all public demos in any status other than 'killed'. This should allow tools like euca-describe-demos to show demos while they are in a saving/untarring/decrypting state
+* Adding prefilled Authors, mailmap files Adding test to validate Authors file is properly set up
+* Documentation updates to make sps add command clearer, hopefully :)
+* adding Authors functionality; fixing one rogue pep8 violation
+* Improve logging configuration docs..
+* Prevent users from uploading demos with a bad or missing store. Allow deletion from registry when backend cannot be used
+* bcwaldon review fixups
+* adding comment
+* Fix for bug #768969: sps index shows non-active demos; sps show <ID> does not show status
+* Completes the S3 storage backend. The original code did not actually fit the API from boto it turned out, and the stubs that were in the unit test were hiding this fact
+* catching NotFound to prevent failure on bad location
+* Prevent requests with invalid store in location param
+* Allow registry deletion to succeed if store deletion fails
+* Documentation updates to make sps add command clearer, hopefully :)
+* Fix for LP Bug #768969
+* Expanding user confirmation default behavior
+* removing excessive exception handling
+* pep8 fixes
+* docstring and exception handling
+* Expanding user_confirm default behavior
+* I modified documentation to show more first-time user friendly examples on using sps. With the previous examples, I followed it as a first-time user and had to spend more than necessary time to figure out how to use it. With this modification, other first-time users would make it work on their systems more quickly
+* - Require user confirmation for "bin/sps clear" and "bin/sps delete <id>" - Allow for override with -f/--force command-line option
+* adding --force option to test_add_clear
+* Adds a test case for updating an image's Name attribute. sps update was not regarding 'name' as a top-level modifiable attribute..
+* Name is an attribute that is modifiable in sps update, too.
+* Mark image properties as deleted when deleting demos. Added a unit test to verify public demos and their properties get deleted when running a 'sps clear' command
+* Update tests and .bzrignore to use tests.sqlite instead of sps.sqlite
+* Only modify the connection URL in runs_sql if the original connection string starts with 'sqlite'
+* Create a decorator that handles setting the SQL store to a disk-based SQLite database when arbitrary SQL statements need to be run against the registry database during a test case
+* Docstring update on the run_sql_command function
+* Mark image properties as deleted when deleting demos. Added a unit test to verify public demos and their properties get deleted when running a 'sps clear' command
+* Add log_file to example sps.conf
+* fixing spacing in help text
+* adding confirmation on image delete/clear; adding user_confirm functionality
+* Add log_file to example sps.conf
+* Make sure we use get_option() when dealing with boolean values read from configuration files...otherwise "False" is True :(
+* Fixing tests. Sorry for late response
+* Make sure we use get_option() when dealing with boolean values read from configuration files...otherwise "False" is True :(
+* resolve merge conflicts
+* chnaged output
+* Open Diablo release
+* Diablo versioning
+* Fake merge with ancient trunk. This is only so that people who "accidentally" have been following lp:~hudson-openstack/sps/trunk will not have problems updating to this
+* Final versioning for Cactus
+* fixing after review
+* Removes capture of exception from eventlet in _upload_and_activate(), which catches the exceptions that come from the _safe_kill() method properly
+* RickH fixups from review
+* Add catch-all except: block in _upload()
+* change output from sps-registry
+* get latest from lp:sps
+* Ensures that configuration values for debug and verbose are used if command-line options are not set
+* Removes capture of exception from eventlet in _upload_and_activate(), which catches the exceptions that come from the _safe_kill() method properly
+* Fix logging in swift
+* Fix Thierry's notice about switched debug and verbose
+* Change parsing of headers to accept 'True', 'on', 1 for boolean truth values
+* Final cactus versioning
+* OK, fix docs to make it clear that only the string 'true' is allowed for boolean headers. Add False-hood unit tests as well
+* Logging was not being setup with configuration file values for debug/verbose
+* Fix up the way the exception is raised from _safe_kill()... When I "fixed" bug 729726, I mistakenly used the traceback as the message. doh
+* Change parsing of headers to accept 'True', 'on', 1 for boolean truth values
+* Add the migration sql scripts to MANIFEST.in. The gets them included in not only the tarball, but also by setup.py install
+* Add the migration sql scripts to MANIFEST.in. The gets them included in not only the tarball, but also by setup.py install
+* Changed raise of exception to avoid displaying incorrect error message in _safe_kill()
+* fix logging in swift
+* Changes "key" column in image_properties to "name"
+* Updated properties should be marked as deleted=0. This allows previously deleted properties to be reactivated on an update
+* Adds --config-file option to common options processing
+* Update the docs in bin/sps so that help for the 'update' command states that metadata not specified will be deleted
+* Fix config test fixtures and pep8 error in bin/sps-manage
+* Provide revised schema and migration scripts for turning 'size' column in 'demos' table to BIGINT. This overcomes a 2 gig limit on demos sizes that can be downloaded from sps
+* Updated properties should be marked as deleted=0. Add unit tests
+* Use logging module, not echo, for logging SQLAlchemy. Fixes bug 746435
+* Change order of setting debug/verbose logging. Thanks for spotting this, Elgar
+* Use logging module, not echo, for logging SQLAlchemy. Fixes bug 746435
+* Ensure we don't ask the backend store to delete an image if the image is in a queued or saving state, since clearly the backend state has yet to completely store the image
+* Changes "key" column in image_properties to "name"
+* Use logging module, not echo for logging SQLAlchemy
+* Updates sps-manage to use configuration files as well as command line options
+* Ensure we don't ask a backend store to delete an image if the image is queued or saving
+* Moved migration into Python script, otherwise PostgreSQL was not migrated. Added changes to the functional test base class to reset the data store between tests. sps_SQL_CONNECTION env variable is now sps_TEST_SQL_CONNECTION
+* changed to more typical examples
+* Add migration scripts for revising the datatype of the 'size' column in the demos table
+* Changes to database schema required to support demos larger than 2Gig on MySQL. Does not update the migration scripts
+* Updates to the Registry API such that only external requests to update image properties purge existing properties. The update_image call now contains an extra flag to purge_props which is set to True for external requests but False internally
+* Updates to the Registry API such that only external requests to update image properties purge existing properties. The update_image call now contains an extra flag to purge_props which is set to True for external requests but False internally
+* Update the sps registry so that it marks properties as deleted if they are no longer exist when demos are updated
+* Simple one.. just add back the Changelog I removed by accident in r94. Fixes bug #742353
+* Adds checksumming to sps
+* Uhhhm, stop_servers() should stop servers, not start them! Thanks to Cory for uncovering this copy/paste fail
+* Fix up test case after merging in bug fixes from trunk... expected results were incorrect in curl test
+* Add ChangeLog back to MANIFEST.in
+* Add migration testing and migration for disk_format/container_format
+* tests.unit.test_misc.execute -> tests.utils.execute after merge
+* Allow someone to set the sps_TEST_MIGRATIONS_CONF environment variable to override the config file to run for the migrations unit test:
+* Update the sps registry so that it marks properties as deleted if they are no longer in the update list
+* Start eventlet WSGI server with a logger to avoid stdout output
+* Adds robust functional testing to sps
+* Add migration script for checksum column
+* Fixed an oops. Didn't realized Repository.latest returned a 0-based version number, and forgot to reversed() the downgrade test
+* OK, migrations are finally under control and properly tested
+* Remove non-existing files from MANIFEST.in
+* Removed sps-combined. Fixed README
+* Removed sps-commit
+* Re-raise _safe_kill() exception in non-3-arg form to avoid pep8 deprecation error
+* Bug #737979: sps-control uses fixed path to Python interpreter, breaking virtualenv
+* Bug #737979: sps-control uses fixed path to Python interpreter, breaking virtualenv
+* Removes sps-combined and fixes TypeError from bad function calls in sps-manage
+* Start eventlet WSGI server with a logger to avoid stdout output
+* Pass boolean values to sps.client as strings, not integers
+* Small adjustment on wait_for_servers()... fixed infinite loop possibility
+* Adds robust functional testing to sps
+* Ensure Content-type set to application/octet-stream for GET /demos/<ID>
+* Ensure Content-Length sent for GET /demos/<ID>
+* HTTPBackend.get() needed options in kwargs
+* Remove sps-combined (use sps-control all start). Fix sps-manage to call the setup_logging() and add_logging_options() methods according to the way they are called in sps-api and sps-registry
+* Support account:user:key in Swift URIs. Adds unit tests for various calls to parse_swift_tokens()
+* Adds documentation on configuring logging and a unit test for checking simple log output
+* Support account:user:key in Swift URIs. Adds unit tests for various calls to parse_swift_tokens()
+* Cherry pick r86 from bug720816
+* Cherry pick r87 from bug720816
+* Fixed run_tests.py addError() method since I noted it was faulty in another branch..
+* Tiny pep8'ers
+* I stole the colorized code from nova
+* Fix typo
+* A quick patch to allow running the test suite on an alternate db backend
+* Merged trunk -resolved conflicts
+* [Add] colorization stolen from nova
+* Don't require swift module for unit-tests
+* Pep8 fix
+* Backing out unit-test workaround
+* Changed to have 2 slashes
+* Allow unit-tests to run without swift module
+* Remove spurios comment in test file
+* Add sps CLI tool
+* Silly mistake when resolving merge conflict...fixed
+* Fixes passing of None values in metadata by turning them into strings. Also fixes the passing of the deleted column by converting it to and from a bool. The test for passing metadata was updated to include these values
+* Adds documentation on configuring logging and a test that log_file works. It didn't, so this also inludes fixes for setting up log handling :)
+* fix data passing
+* add failing test for None and deleted
+* Uses logger instead of logging in migration.py
+* Using logger in migration api instead of logging directly
+* Only clean up in the cleanup method. Also, we don't need the separate URI now
+* Use unregister_models instead of os.unlink to clean up after ourselves
+* Fixed unregister_models to actually work
+* Fixed migration test to use a second DB URL
+* Replaced use of has_key with get + default value
+* Make it clear that the checksum is an MD5 checksum in docs
+* Adds checksumming to sps
+* Whoops! Left out a self.db_path
+* Allow tests to run on an alternate dburi given via environment variables
+* Adds ability for Swift to be used as a full-fledged backend. Adds POST/PUT capabilities to the SwiftBackend Adds lots of unit tests for both FilesystemBackend and SwiftBackend Removes now-unused tests.unit.fakeswifthttp module
+* Remove last vestiges of account in Swift store
+* Quick fixup on registry.get_client()
+* Public? => Public: per Cory's comment. Added a little more robust exception handling to some methods in bin/sps
+* Fixes for Devin and Rick's reviews
+* Adds disk_format and container_format to Image, and removes the type column
+* Fixes client update_image to work like create_image. Also fixes some messed up exceptions that were causing a try, except to reraise
+* Final review fixes. Makes disk_format and container_format optional. Makes sps-upload --type put the type in properties
+* remove test skip
+* Put account in sps.conf.sample's swift_store_auth_address, use real swift.common.client.ClientException, ensure tests work with older installed versions of Swift (which do not have, for example, swift.common.client.Connection.get_auth method)
+* Work around Eventlet exception clearing by memorizing exception context and re-raising using 3-arg form
+* Adds bin/sps to setup.py
+* Fixes from Rick's review #1
+* Reverts Image `type` back to the old behavior of being nullable
+* Work around Eventlet exception clearing
+* Add sys.path mangling to sps-upload
+* Add sys.path adjustment magic to sps-upload
+* Adds ability for Swift to be used as a full-fledged backend. Adds POST/PUT capabilities to the SwiftBackend Adds lots of unit tests for both FilesystemBackend and SwiftBackend Removes now-unused tests.unit.fakeswifthttp module
+* Couple tiny cleanups noticed when readin merge diff.
+* bin/sps-admin => bin/sps, since it's really just the CLI tool to interact with sps. Added lots of documentation and more logging statements in some critical areas (like the sps.registry calls..
+* Adds lots of unit tests for verifying exceptions are raised properly with invalid or mismatched disk and container formats
+* Makes --kernel and --ramdisk required arguments for sps-upload since Nova currently requires them
+* Removing image_type required behavior
+* Removing requirement to pass kernel and ramdisk
+* Add test cases for missing and invalid disk and container formats
+* Requiring kernel and ramdisk args in sps-upload
+* Make disk_format and container_format required
+* Make disk_format and container_format required
+* Adds an admin tool to sps (bin/sps-admin) that allows a user to administer the sps server:
+* Make sure validate_image() doesn't throw exception on missing status when updating image
+* Adds disk_format and container_format to Image, and removes the type column
+* This adds a test case for LP Bug 704854 -- Exception raised by Registry server gets eaten by API server
+* Add debugging output to assert in test_misc. Trying to debug what Hudson fails on..
+* Fixups from Rick's review
+* Removes now-unnecessary @validates decorator on model
+* I should probably rebase this commit considering all the previous commits weren't actually addressing the issue. The fact that I had sps-api and sps-registry installed on my local machine was causing the test runs to improperly return a passing result
+* Use Nova's path trick in all bins..
+* Add path to sps-control
+* Removes image type validation in the sps registry
+* Adding vhd as recognized image type
+* Reverting the removal of validation
+* Removing image type validation
+* Adds --pid-file option to bin/sps-control
+* Add %default for image type in sps-upload
+* Adds Location: header to return from API server for POST /demos, per APP spec
+* Cleanups from Soren's review
+* Add an ImportError check when importing migrate.exceptions, as the location of that module changed in a recent version of the sqlalchemy-migrate library
+* Adds Location: header to return from API server for POST /demos, per APP spec
+* This adds a test case for LP Bug 704854 -- Exception raised by Registry server gets eaten by API server
+* Adds --pid-file option to bin/sps-control
+* Add an ImportError check when importing migrate.exceptions, as the location of that module changed in a recent version of the sqlalchemy-migrate library
+* Adds sql_idle_timeout to reestablish connections to database after given period of time
+* Add sql_idle_timeout
+* Removes lockfile and custom python-daemon server initialization in favour of paste.deploy
+* Review 3 fixups
+* Remove get_config_file_options() from sps-control
+* Fixes for Rick review #2
+* Remove no-longer-needed imports..
+* Remove extraneous debug import..
+* Changes the server daemon programs to be configured only via paste.deploy configuration files. Removed ability to configure server options from CLI options when starting the servers with the exception of --verbose and --debug, which are useful during debugging
+* Adds sps-combined and sps-manage to setup.py
+* Fix merge conflicts
+* Adds sps-combined and sps-manage to setup.py
+* Fixes bug 714454
+* ReStructure Text files need to end in .rst, not .py ;)
+* Update README, remove some vestigial directories, and other small tweaks
+* Removing dubious advice
+* Adds facilities for configuring sps's servers via configuration files
+* Use fix_path on find_config_file() too
+* Fixups from Rick's review
+* Including tests/ in pep8
+* Typo fixes, clarifying
+* Updating README, rmdir some empty dirs
+* Adds bin/sps-control program server daemonization wrapper program based on Swift's swift-init script
+* Ignore build and deploy-related files
+* Adds sqlalchemy migrations
+* Fix bug 712575. Make BASE = models.BASE
+* Make sure BASE is the models.BASE, not a new declarative_base() object
+* Had to reverse search order of directories for finding config files
+* Removes lockfile and custom python-daemon server initialization in favour of paste.deploy
+* Adds facilities for configuring sps's servers via configuration files
+* Creating indexes
+* Adding migration test
+* Fixing migration import errors
+* Small cleanups
+* sps-manage uses common options
+* Merging in sps/cactus
+* Pep8 fix
+* Pep8 fixes
+* Refactoring into option groups
+* Hopefully-final versioning (0.1.7), no review needed
+* Final versioning, no review needed
+* Adding db_sync to mirror nova
+* Adding some basic documentation
+* Better logging
+* Adding image_properties migration
+* Adding migration for demos table
+* Adding migration management commands
+* Remove debugging output that wasn't supposed to go into this branch (yet) :)
+* Adds --debug option for DEBUG-level logging. --verbose now only outputs INFO-level log records
+* Typo add_option -> add_options
+* Fixes from Rick's review. Thanks, Rick
+* Adds --sql-connection option
+* First round of logging functionality:
+* Merged use-optparse
+* Removes sps.common.db.sqlalchemy and moves registration of models and create_engine into sps.registry.db.api
+* pep8-er in bin/sps-combined
+* Fixes lp710789 - use-optparse breaks daemonized process stop
+* Adds bin/sps-combined. Useful in testing..
+* Tiny pep8 fixup in setup.py
+* Rework what comes back from parse_options()[0] to not stringify option values. Keep them typed
+* Remove use of gflags entirely. Use optparse
+* Removing unecessary param to get_all_public
+* Merging trunk
+* Adding back some missing code
+* Cleaning up some code
+* Makes sps's versioning non-static. Uses Nova's versioning scheme
+* Adds/updates the copyright info on most of the files in sps and copies over the Authors check from Nova
+* Removing sqlalchemy dir
+* Removed methods from sqlalchemy/api
+* Refactor update/create
+* Messed up a permission somehow
+* Refactoring destroy
+* feh
+* A few more
+* A few more I missed
+* version bumped after tarball cut. no review needed..
+* Bump version
+* Removing authors test for now
+* PEP8 cleanup
+* PEP8 cleanup
+* Should fix the sphinx issue
+* Adds architecture docs and enables Graphviz sphinx extension. Also cleans up source code formatting in docs
+* Make sphinx conditional
+* bumps version after tarball release of 0.1.4
+* Bump version
+* Added bzr to pip-requires and refixed some pep8 stuff
+* Authors check
+* A few more copyrights
+* Copyright year change
+* Pylint cleanup
+* Added copyright info
+* Adds architecture docs and enables Graphviz sphinx extension. Also cleans up source code formatting in docs
+* bumps release version. ready for Bexar final release
+* Version bump after release
+* added sphinx and argparse into tools/pip-requires so that setup.py works. this bug also prevents nova from creating a virtualenv
+* fixes setup install pip dependencies
+* Version bump for release
+* Fixes bug #706636: Make sure pep8 failures will return failure for run_tests.sh
+* Make run_tests.sh return failure when pep8 returns fail, and fix the pep8 error in /bin/sps-upload
+* This patch: * Converts dashes to underscores when extracting image-properties from HTTP headers (we already do this for 'regular' image attributes * Update image_properties on image PUTs rather than trying to create dups
+* This patch replaces some remaining references to req.body (which buffers the entire request body into memory!) with the util.has_body method which can determine whether a body is present without reading any of it into memory
+* Adding Apache license, fixing long line
+* Making sps-upload a first-class binary
+* Revove useless test_data.py file, add image uploader
+* Fix property create
+* Dont buffer entire image stream on PUT
+* Adds man pages for sps-registry and sps-api programs. Adds Getting Started guide to the sps documentation
+* Fixes LP Bug #700162: demos greater than 2GB cannot be uploaded using sps.client.Client
+* Duh, it helps to import the class you are inheriting from...
+* OK, found a solution to our test or functional dilemma. w00t
+* Make compat with chunked transfer
+* Removes the last vestiges of Twisted from sps
+* Pull in typo fix
+* Add in manpage installation hook. Thanks Soren :)
+* Fixes LP Bug #700162: demos greater than 2GB cannot be uploaded using sps.client.Client
+* Removes Twisted from tools/install_venv.py and zope.interface from tools/pip-requires. Shaved a full 45 seconds for me off of run_tests.sh -V -f now we're not downloading a giant Twisted tarball..
+* Remove last little vestiges of twisted
+* Quick typo fix in docs
+* Add run_tests.py to tarball
+* Also include run_tests.py in tarball
+* Adds man pages for sps-registry and sps-api. Adds Getting Started guide to sps docs
+* Fixes bug #696375: x-image-meta-size not optional despite documentation saying so
+* PEP8 fixes in /sps/store/__init__.py
+* Fix Bug #704038: Unable to start or connect to register server on anything other than 0.0.0.0:9191
+* Fix Bug #704038: Unable to start or connect to register server on anything other than 0.0.0.0:9191
+* upgrade version..
+* Fixes Bug#696375: x-image-meta-size is not optional, contrary to documentation
+* Increase version after release
+* Cut 0.1.2
+* Files missing from the tarball (and you probably need to cut a 0.1.2.)
+* Cleanup of RST documentation and addition of docs on an image's status
+* Include some files that were left out
+* Implements the S3 store to the level of the swift store
+* fixes bug698318
+* Fixes suggested by JayPipes review. Did not modify docstrings in non-related files
+* This merge is in conjunction with lp:~rconradharris/nova/xs-snap-return-image-id-before-snapshot
+* Updating docs
+* Merging trunk
+* Clean up the rest of sps's PEP8 problems
+* PEP-8 Fixes
+* Fixing eventlet-raise issue
+* Bug #698316: sps reads the whole image into memory when handling a POST /demos request
+* Merging trunk
+* Fixed pylint/pep8 for sps.store.s3
+* Implement S3 to the level of swift
+* removing old methods
+* refactoring so update can take image_data
+* More PEP8 fixes
+* Fix all sps's pep8 problems
+* Remove incorrect doccomments about there being a default for the host parameter, fix misdocumented default port, and remove handling of missing parameters in BaseClient, because the values are always specified by the subclass's __init__
+* Bug #696385: sps is not pep8-clean
+* Bug #696382: sps client parameter defaults misdocumented
+* Fixes a number of things that came up during initial coding of the admin tool:
+* Made review changes from Rick
+* Duh, use_ssl should not use HTTPConnection..
+* Remove final debugging statement
+* merge trunk
+* Remove debugging statements
+* Fixes a number of things that came up during initial coding of the admin tool:
+* fix bug 694382
+* Bug #694382: setup.py refers to parallax-server and teller-server, when these have been renamed
+* documentation cleanup and matching to other OpenStack projects. sps is no longer the red-headed documentation stepchild in OpenStack..
+* Converts timestamp attributes to datetime objects before persisting
+* Adding __protected_attributes__, some PEP8 cleanups
+* review fixes
+* Update sphinx conf to match other OpenStack projects
+* Documentation cleanup. Splits out index.rst into multiple section docs
+* Converting to datetime before saving image
+* Enhances POST /demos call to, you know, actually make it work..
+* Make directory for filesystem backend
+* doing the merge of this again...somehow the trunk branch never got rev26 :(
+* Adds POST /demos work that saves image data to a store backend
+* Update docs for adding image..
+* Fix Chris minor nit on docstring
+* Fixes binaries, updates WSGI file to more recent version from Nova, and fixes an issue in SQLAlchemy API that was being hidden by stubs and only showed up when starting up the actual binaries and testing..
+* Major refactoring..
+* Fix testing/debug left in
+* Fixes from review
+* Documentation updates and spsClient -> Client
+* Refactor a bunch of stuff around the image files collection
+* Cleanup around x-image-meta and x-image-meta-property HTTP headers in GET/HEAD
+* Update /sps/client.py to have spsClient do all operations that RegistryClient does
+* Merges sps API with the registry API: * Makes HEAD /demos/<ID> return metadata in headers * Make GET /demos/<ID> return image data with metadata in headers Updates docs some (more needed)
+* Second step in simplifying the sps API
+* This is the first part of simplifying the sps API and consolidating the Teller and Parallax APIs into a single, unified sps API
+* Adds DELETE call to Teller API
+* Fixes Swift URL Parsing in Python 2.6.5 by adding back netloc
+* Moving imports into main which will only be executed after we daemonize thus avoiding the premature initialization of epoll
+* Delaying eventlet import until after daemonization
+* Fix Swift URL parsing for Python 2.6.5
+* Don't leak implementation details in Swift backend. Return None on successful delete_object call
+* Adds call to Swift's DELETE
+* Typo fixed and tiny cleanups
+* Adds DELETE to Teller's API
+* Just some small cleanups, fixing: * Swapped port numbers (Parallax Port <=> Teller port) * Removing extraneous routes in Teller API * Adding required slashes to do_request
+* * Changes Teller API to use REST with opaque ID sent in API calls instead of a "parallax URI". This hides the URI stuff behind the API layer in communication between Parallax and Teller. * Adds unit tests for the only complete Teller API call so far: GET demos/<ID>, which returns a gzip'd string of image data
+* Fixing swapped port numbers, removing extraneous routes in Teller controller, adding required slash for do_request calls
+* * Changes Teller API to use REST with opaque ID sent in API calls instead of a "parallax URI". This hides the URI stuff behind the API layer in communication between Parallax and Teller. * Adds unit tests for the only complete Teller API call so far: GET demos/<ID>, which returns a gzip'd string of image data
+* Add files attribute to Parallax client tests
+* Adds client classes for Parallax and Teller and fixes some issues where our controller was not returning proper HTTP response codes on errors..
+* Cleanup/fixes for Rick review
+* Adds client classes ParallaxClient and (stubbed) TellerClient to new sps.client module
+* packaging fixups preparing for release candidate
+* Remove symlinks in bin/
+* Packaging fixups
+* awesomeness. merging into trunk since my parallax-api is already in trunk I believe. :)
+* Moving ATTR helpers into db module
+* PUTing and POSTing using image key
+* Quick fix...gives base Model an update() method to make it behave like a dict
+* Make returned mapping have an 'image' key to help in XML serialization
+* Ignore virtualenv directory in bzr
+* This patch removes unique index on the 'key' column of image_metadatum and replaces it with a compound UniqueConstraint on 'image_id' and 'key'. The 'key' column remains indexed
+* Fixes lp653358
+* Renaming is_cloudfiles_available -> is_swift_available
+* Adds compound unique constraint to ImageMetadatum
+* Using swift.common.client rather than python-cloudfiles in Teller's Swift backend
+* Adds DELETE to the Parallax REST API
+* Implements the REST call for updating image metadata in the Parallax API
+* Implements Parallax API call to register a new image
+* Adds a /demos/detail route to the Parallax controller, adds a unit test for it, and cleans up Michael's suggestions
+* Works around non-RFC compliance in Python (< 2.6.5) urlparse library
+* Workaround for bug in Python 2.6.1 urlparse library
+* Adds tests for bad status set on image
+* Implements Parallax API call to register a new image
+* This patch overhauls the testing in sps:
+* unittest2 -> unittest. For now, since not using unittest2 features yet
+* Fixes up test_teller_api.py to use stubout correctly. Fixes a few bugs that showed up in the process, and remove the now-unnecessary FakeParallaxAdapter
+* First round of cleaning up the unittests. Adds test suite runner, support for virtualenv setup and library dependencies, resolves issues with ImportErrors on cloudfiles, adds pymox/stubout support and splits the backend testing into distinct unittest cases
+* With this patch Parallax and teller now work end-to-end with the Swift backend
+* Adding missing backend files, fixing typos in comments
+* This patch: * Decouples Controller for ParallaxAdapter implementation by adding generic RegistryAdapter and providing a lookup function * Adds base model attributes to Parallax's JSON (created_at, etc)
+* Improving symmetry between teller and parallax
+* Fixing swift authurl
+* Add RegistryAdapter, include ModelBase attributes
+* Fixing Teller image tests
+* Created teller-server.py in bin/
+* Cleaning up Teller backend
+* Rewrote ImageController to inherit from the work Rick Harris did in sps.common. Moved it into teller/api/demos.py to make teller match parallax. Fixed tests. Renamed them to distinguish if any parallax tests ever get written
+* Adding Image index call, nesting the Image show dict to facilitate XML serialization
+* Moving parallax models out of common and into the parallax module
+* Updated tests
+* Reimplements server.py as a wsgi api inheriting from sps.common
+* This patch: * pulls in a number of useful libraries from Nova under the common/ path (we can factor those out to a shared library in Bexar-release) * Defines the models in common.db.sqlalchemy.models.py (this should be factored out into the parallax package soon) * Adds the parallax api-server under /bin (if PyPI was used to pull python-daemon and python-lockfile, you may need to apply a patch I have against it)
+* Changes the obj['uri'] to obj['location'] to better sync with the representation within Nova. Adds the image_lookup_fn = ParallaxAdapter.lookup to teller.server
+* ImageChunk -> ImageFile, merging APIRouter into API for now
+* Adding Apache header to test_data.py
+* Small cleanups
+* Parallax will return obj['location'] instead of obj['uri'], also maybe a parallax lookup fn would be nice?
+* Implements a Parallax adapter for looking up demos requested from nova. Adds a size check to SwiftBackend to ensure that the chunks haven't been truncated or anything
+* Reconciling parallax modifications with modulization of sps
+* Adding demos controller
+* Adding API directory and server.py
+* Modulify the imports
+* Implements Parallax adapter for lookups from Teller, also adds size expectations to the backend adapters
+* Adding files from Nova
+* Makes sps a module, containing teller and parallax sub-modules
+* libify sps into teller and parallax modules. Make nosetests work by making tests and tests/unit/ into packages
+* Rearranged the code a little. Added a setup.py. Added sphinx doc skeleton
+* Added setup.py and sphinx docs
+* Reorg to make Monty's build pedanticness side happier
+* Implements Swift backend for teller
+* ignore all .pyc files
+* Merging ricks changes
+* Adding basic image controller and mock backends
+* Adding description of registry data structure
+* Adding teller_server
+* adding filesystem and http backends
+* Initial check-in
